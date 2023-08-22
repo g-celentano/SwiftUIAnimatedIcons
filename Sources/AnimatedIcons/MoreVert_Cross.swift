@@ -15,7 +15,7 @@ public struct MoreVert_Cross: View {
         _isSelected = isSelected
         
         self.size = size ?? 40.0
-        self.duration = duration ?? 0.05
+        self.duration = duration ?? 0.1
         
     }
 
@@ -28,11 +28,14 @@ public struct MoreVert_Cross: View {
             Circle()
                 .frame(width: size * 0.3)
                 .offset(x: 0, y: isSelected ? 0 : -size * 0.35)
+                .opacity(moreOpacity)
             ZStack{
                 Rectangle()
+                    .frame(width: isSelected ? size * 0.22 : size * 0.3)
                     .cornerRadius(isSelected ? 0 : size)
                     .rotationEffect(.degrees(-45), anchor: .center)
                 Rectangle()
+                    .frame(width: isSelected ? size * 0.22 : size * 0.3)
                     .cornerRadius(isSelected ? 0 : size)
                     .rotationEffect(.degrees(45), anchor: .center)
             }
@@ -41,6 +44,7 @@ public struct MoreVert_Cross: View {
             Circle()
                 .frame(width: size * 0.3)
                 .offset(x: 0, y: isSelected ? 0 : size * 0.35)
+                .opacity(moreOpacity)
         }
         .frame(width: size, height: size)
         .onTapGesture {
