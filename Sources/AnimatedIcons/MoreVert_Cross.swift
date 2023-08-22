@@ -57,10 +57,8 @@ public struct MoreVert_Cross: View {
                         }
                     }
                 case false:
-                    DispatchQueue.main.asyncAfter(deadline: .now() + duration) {
-                        withAnimation {
-                            moreOpacity = 1.0
-                        }
+                    withAnimation {
+                        moreOpacity = 1.0
                     }
                 }
             }
