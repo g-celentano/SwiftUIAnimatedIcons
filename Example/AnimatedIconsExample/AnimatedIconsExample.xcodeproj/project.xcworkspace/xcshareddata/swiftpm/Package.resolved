@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "animatedicons",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/g-celentano/AnimatedIcons",
+      "state" : {
+        "branch" : "main",
+        "revision" : "6cd06affc7e87f1ef9fdc943402b706558a6c803"
+      }
+    }
+  ],
+  "version" : 2
+}
