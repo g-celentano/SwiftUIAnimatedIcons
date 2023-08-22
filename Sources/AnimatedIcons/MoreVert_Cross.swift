@@ -57,9 +57,7 @@ public struct MoreVert_Cross: View {
                         }
                     }
                 case false:
-                    withAnimation {
-                        moreOpacity = 1.0
-                    }
+                    moreOpacity = 1.0
                 }
             }
         }
