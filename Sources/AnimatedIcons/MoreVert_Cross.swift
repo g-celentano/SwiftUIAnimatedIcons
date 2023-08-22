@@ -11,12 +11,11 @@ import SwiftUI
 @available(iOS 13.0, *)
 @available(macOS 10.15, *)
 public struct MoreVert_Cross: View {
-    public init(isSelected: Binding<Bool>,size: CGFloat? = nil, duration: CGFloat? = nil ) {
+    public init(isSelected: Binding<Bool>, size: CGFloat? = nil, duration: CGFloat? = nil) {
         _isSelected = isSelected
-        
+
         self.size = size ?? 40.0
         self.duration = duration ?? 0.1
-        
     }
 
     @Binding private var isSelected: Bool
@@ -29,7 +28,7 @@ public struct MoreVert_Cross: View {
                 .frame(width: size * 0.3)
                 .offset(x: 0, y: isSelected ? 0 : -size * 0.35)
                 .opacity(moreOpacity)
-            ZStack{
+            ZStack {
                 Rectangle()
                     .frame(width: isSelected ? size * 0.22 : size * 0.3)
                     .cornerRadius(isSelected ? 0 : size)
@@ -40,7 +39,7 @@ public struct MoreVert_Cross: View {
                     .rotationEffect(.degrees(45), anchor: .center)
             }
             .frame(width: size * 0.3, height: isSelected ? size : size * 0.3)
-                
+
             Circle()
                 .frame(width: size * 0.3)
                 .offset(x: 0, y: isSelected ? 0 : size * 0.35)
@@ -48,12 +47,20 @@ public struct MoreVert_Cross: View {
         }
         .frame(width: size, height: size)
         .onTapGesture {
-            
-            withAnimation(.linear(duration: duration)){
+            withAnimation(.linear(duration: duration)) {
                 isSelected.toggle()
-                DispatchQueue.main.asyncAfter(deadline: .now() + duration) {
-                    withAnimation {
-                        moreOpacity = isSelected ? 0.0 : 1.0
+                switch isSelected {
+                case true:
+                    DispatchQueue.main.asyncAfter(deadline: .now() + duration) {
+                        withAnimation {
+                            moreOpacity = 0.0
+                        }
+                    }
+                case false:
+                    DispatchQueue.main.asyncAfter(deadline: .now() + duration) {
+                        withAnimation {
+                            moreOpacity = 1.0
+                        }
                     }
                 }
             }
