@@ -1,6 +1,6 @@
 //
 //  SwiftUIView.swift
-//
+//  
 //
 //  Created by Gaetano Celentano on 22/08/23.
 //
@@ -10,7 +10,7 @@ import SwiftUI
 
 @available(iOS 13.0, *)
 @available(macOS 10.15, *)
-public struct MoreVert_Cross: View {
+public struct MoreHor_Cross: View {
     public init(isSelected: Binding<Bool>, size: CGFloat? = nil, duration: CGFloat? = nil, firstColor: Color? = nil, secondColor: Color? = nil, thirdColor: Color? = nil, crossColor: Color? = nil) {
         _isSelected = isSelected
 
@@ -31,14 +31,14 @@ public struct MoreVert_Cross: View {
     @State private var crossColor: Color
 
     public var body: some View {
-        ZStack {
+        ZStack{
             Circle()
                 .frame(width: isSelected ? size * 0.1 : size * 0.3)
-                .offset(x: 0, y: isSelected ? 0 : -size * 0.35)
+                .offset(x: isSelected ? 0 : -size * 0.35, y: 0 )
                 .foregroundColor(firstDotColor)
             Circle()
                 .frame(width: isSelected ? size * 0.1 : size * 0.3)
-                .offset(x: 0, y: isSelected ? 0 : size * 0.35)
+                .offset(x: isSelected ? 0 : size * 0.35, y: 0 )
                 .foregroundColor(thirdDotColor)
             ZStack {
                 Rectangle()
@@ -64,8 +64,8 @@ public struct MoreVert_Cross: View {
 
 @available(iOS 13.0, *)
 @available(macOS 10.15, *)
-struct MoreVert_Cross_Previews: PreviewProvider {
+struct MoreHor_Cross_Previews: PreviewProvider {
     static var previews: some View {
-        MoreVert_Cross(isSelected: .constant(false), size: 24)
+        MoreHor_Cross(isSelected: .constant(true), size: 24)
     }
 }

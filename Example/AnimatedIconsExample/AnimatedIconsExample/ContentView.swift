@@ -5,14 +5,14 @@
 //  Created by Gaetano Celentano on 22/08/23.
 //
 
-import SwiftUI
 import AnimatedIcons
+import SwiftUI
 
 struct ContentView: View {
-    @State var isSelected : Bool = false
+    @State var isSelected: Bool = false
     var body: some View {
         VStack {
-            MoreVert_Cross(isSelected: $isSelected)
+            MoreVert_Cross(isSelected: $isSelected, firstColor: .blue, secondColor: .red, thirdColor: .yellow, crossColor: .green)
             Text(isSelected ? "cross" : "more vert")
         }
         .padding()
