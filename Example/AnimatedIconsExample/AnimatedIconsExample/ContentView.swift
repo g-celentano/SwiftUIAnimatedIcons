@@ -13,9 +13,9 @@ struct ContentView: View {
     @State var isSelectedHorizontal: Bool = false
     var body: some View {
         VStack {
-            MoreVert_Cross(isSelected: $isSelectedVertical, firstColor: .blue, secondColor: .red, thirdColor: .yellow, crossColor: .green)
+            MoreVert_Cross(isSelected: $isSelectedVertical, duration: 0.75)
             Text(isSelectedVertical ? "cross" : "more vertical")
-            MoreHor_Cross(isSelected: $isSelectedHorizontal, firstColor: .brown, secondColor: .indigo, thirdColor: .purple)
+            MoreHor_Cross(isSelected: $isSelectedHorizontal, size: 150, colors: [.red, .blue, nil, .indigo])
             Text(isSelectedHorizontal ? "cross" : "more horizontal")
         }
         .padding()

@@ -20,7 +20,7 @@ import SwiftUI
 ///     - duration: animation duration
 ///     - colors: array of colors - [first dot color, second dot color, third dot color, cross 
 public struct MoreHor_Cross: View {
-    public init(isSelected: Binding<Bool>, size: CGFloat? = nil, duration: CGFloat? = nil, colors: [Color?] = []) {
+    public init(isSelected: Binding<Bool>, size: CGFloat? = nil, duration: CGFloat? = nil, colors: [Color?] = [nil, nil, nil, nil]) {
         _isSelected = isSelected
         self.size = size ?? 24.0
         self.duration = duration ?? 0.1
