@@ -18,16 +18,17 @@ import SwiftUI
 ///     - **false** state -> horizontal more dots icon
 /// - **size**: icon size
 /// - **duration**: animation duration
-/// - **colors**: array of colors - [first dot color, second dot color, third dot color, cross color]
+/// - **{firstDot, secondDot, thirdDot, cross}color**: color for each category inbetween _{}_
 public struct MoreHor_Cross: View {
-    public init(isSelected: Binding<Bool>, size: CGFloat = 24.0, duration: CGFloat = 0.1, colors: [Color] = [.black, .black, .black, .black]) {
+    public init(isSelected: Binding<Bool>, size: CGFloat = 24.0, duration: CGFloat = 0.1,
+                firstDotColor: Color = .black, secondDotColor: Color = .black, thirdDotColor: Color = .black, crossColor: Color = .black) {
         _isSelected = isSelected
         self.size = size
         self.duration = duration
-        self.firstDotColor = colors[0]
-        self.secondDotColor = colors[1]
-        self.thirdDotColor = colors[2]
-        self.crossColor = colors[3]
+        self.firstDotColor = firstDotColor
+        self.secondDotColor = secondDotColor
+        self.thirdDotColor = thirdDotColor
+        self.crossColor = crossColor
     }
 
     @Binding private var isSelected: Bool

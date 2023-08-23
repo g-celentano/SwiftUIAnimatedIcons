@@ -18,20 +18,24 @@ import SwiftUI
 ///     - **false** state -> add icon
 ///  - **size**: icon size
 ///  - **duration**: animation duration
-///  - **colors** : array of colors - [plus color, cross color]
+///  - **plusColor** : plus icon color
+///  - **crossColor** : cross icon color
 public struct Add_Cross: View {
     
-    public init(isSelected: Binding<Bool>, size: CGFloat = 24.0, duration: CGFloat = 0.25, colors: [Color] = [.black,.black]) {
+    public init(isSelected: Binding<Bool>, size: CGFloat = 24.0, duration: CGFloat = 0.25,
+                plusColor: Color = .black, crossColor: Color = .black) {
         _isSelected = isSelected
         self.size = size
         self.duration = duration
-        self.colors = colors
+        self.plusColor = plusColor
+        self.crossColor = crossColor
     }
     
     @Binding var isSelected: Bool
     @State var size: CGFloat
     @State var duration: CGFloat
-    @State var colors: [Color]
+    @State var plusColor: Color
+    @State var crossColor: Color
     
     public var body: some View {
         ZStack{
@@ -42,8 +46,8 @@ public struct Add_Cross: View {
                 .rotationEffect(.degrees(90), anchor: .center)
         }
         .frame(width: size, height: size, alignment: .center)
-        .foregroundColor(isSelected ? colors.last : colors.first)
-        .rotationEffect(isSelected ? .degrees(405) : .degrees(0))
+        .foregroundColor(isSelected ? crossColor : plusColor)
+        .rotationEffect(isSelected ? .degrees(-315) : .degrees(0))
         .onTapGesture {
             withAnimation(.linear(duration: duration)){
                 isSelected.toggle()
