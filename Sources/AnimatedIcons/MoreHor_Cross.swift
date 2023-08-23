@@ -10,24 +10,24 @@ import SwiftUI
 
 @available(iOS 13.0, *)
 @available(macOS 10.15, *)
-/// MoreHor_Cross Animated Icon
-/// From horizontally arranged more dots to cross icon
+/// MoreHor-Cross Animated Icon
+/// From horizontally arranged more dots to cross icon.
 /// Parameters list:
-///     - isSelected: state handle value
-///         - **true** state -> cross icon
-///         - **false** state -> horizontal more dots icon
-///     - size: icon size
-///     - duration: animation duration
-///     - colors: array of colors - [first dot color, second dot color, third dot color, cross 
+/// - **isSelected**: state handle
+///     - **true** state -> cross
+///     - **false** state -> horizontal more dots icon
+/// - **size**: icon size
+/// - **duration**: animation duration
+/// - **colors**: array of colors - [first dot color, second dot color, third dot color, cross color]
 public struct MoreHor_Cross: View {
-    public init(isSelected: Binding<Bool>, size: CGFloat? = nil, duration: CGFloat? = nil, colors: [Color?] = [nil, nil, nil, nil]) {
+    public init(isSelected: Binding<Bool>, size: CGFloat = 24.0, duration: CGFloat = 0.1, colors: [Color] = [.black, .black, .black, .black]) {
         _isSelected = isSelected
-        self.size = size ?? 24.0
-        self.duration = duration ?? 0.1
-        self.firstDotColor = colors[0] ?? .black
-        self.secondDotColor = colors[1] ?? .black
-        self.thirdDotColor = colors[2] ?? .black
-        self.crossColor = colors[3] ?? .black
+        self.size = size
+        self.duration = duration
+        self.firstDotColor = colors[0]
+        self.secondDotColor = colors[1]
+        self.thirdDotColor = colors[2]
+        self.crossColor = colors[3]
     }
 
     @Binding private var isSelected: Bool
