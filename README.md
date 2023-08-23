@@ -8,14 +8,14 @@
          - **false** state -> horizontal more dots icon
      - **size**: icon size
      - **duration**: animation duration
-     - **{firstDot, secondDot, thirdDot, cross}color**: color for each category inbetween _{}_
+     - **{firstDot, secondDot, thirdDot, cross}color**: color for each category in-between _{}_
  - MoreHor-Cross Animated Icon <br>From horizontally arranged more dots to cross icon.<br>Parameters list:
      - **isSelected**: state handle value
          - **true** state -> cross icon
          - **false** state -> horizontal more dots icon
      - **size**: icon size
      - **duration**: animation duration
-     - **{firstDot, secondDot, thirdDot, cross}color**: color for each category inbetween _{}_
+     - **{firstDot, secondDot, thirdDot, cross}color**: color for each category in-between _{}_
  - Add-Cross Animated Icon<br>From plus icon to cross icon.<br>Parameters list:
     - **isSelected**: state handle value:
         - **true** state -> cross icon

@@ -18,7 +18,7 @@ import SwiftUI
 ///         - **false** state -> horizontal more dots icon
 ///     - **size**: icon size
 ///     - **duration**: animation duration
-///     - **{firstDot, secondDot, thirdDot, cross}color**: color for each category inbetween _{}_
+///     - **{firstDot, secondDot, thirdDot, cross}color**: color for each category in-between _{}_
 public struct MoreVert_Cross: View {
     public init(isSelected: Binding<Bool>, size: CGFloat = 24.0, duration: CGFloat = 0.1,
                 firstDotColor: Color = .black, secondDotColor: Color = .black, thirdDotColor: Color = .black, crossColor: Color = .black) {
