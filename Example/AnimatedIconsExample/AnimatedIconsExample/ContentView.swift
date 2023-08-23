@@ -16,9 +16,9 @@ struct ContentView: View {
         VStack {
             MoreVert_Cross(isSelected: $isSelectedVertical, duration: 0.75)
             Text(isSelectedVertical ? "cross" : "more vertical")
-            MoreHor_Cross(isSelected: $isSelectedHorizontal, size: 150, colors: [.red, .blue, .brown, .indigo])
+            MoreHor_Cross(isSelected: $isSelectedHorizontal, size: 150)
             Text(isSelectedHorizontal ? "cross" : "more horizontal")
-            Add_Cross(isSelected: $isSelectedAdd, size: 80, colors: [.red, .brown])
+            Add_Cross(isSelected: $isSelectedAdd, size: 80, plusColor: .red, crossColor: .blue)
             Text(isSelectedAdd ? "cross" : "plus")
         }
         .padding()
