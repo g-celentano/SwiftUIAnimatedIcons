@@ -10,16 +10,25 @@ import SwiftUI
 
 @available(iOS 13.0, *)
 @available(macOS 10.15, *)
+/// MoreVert_Cross Animated Icon
+/// From vetically arranged more dots to cross icon
+/// Parameters list:
+///     - isSelected: state handle value
+///         - **true** state -> cross icon
+///         - **false** state -> horizontal more dots icon
+///     - size: icon size
+///     - duration: animation duration
+///     - colors: array of colors - [first dot color, second dot color, third dot color, cross
 public struct MoreVert_Cross: View {
-    public init(isSelected: Binding<Bool>, size: CGFloat? = nil, duration: CGFloat? = nil, firstColor: Color? = nil, secondColor: Color? = nil, thirdColor: Color? = nil, crossColor: Color? = nil) {
+    public init(isSelected: Binding<Bool>, size: CGFloat? = nil, duration: CGFloat? = nil, colors: [Color?] = []) {
         _isSelected = isSelected
 
         self.size = size ?? 24.0
         self.duration = duration ?? 0.1
-        self.firstDotColor = firstColor ?? .black
-        self.secondDotColor = secondColor ?? .black
-        self.thirdDotColor = thirdColor ?? .black
-        self.crossColor = crossColor ?? .black
+        self.firstDotColor = colors[0] ?? .black
+        self.secondDotColor = colors[1] ?? .black
+        self.thirdDotColor = colors[2] ?? .black
+        self.crossColor = colors[3] ?? .black
     }
 
     @Binding private var isSelected: Bool
