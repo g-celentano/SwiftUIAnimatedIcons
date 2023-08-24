@@ -32,3 +32,8 @@
     - **{burger, cross}Color**: color of the specified icon in-between _{}_
     - **duration**: animation duration
     - **isRounded**: rounded line-caps flag
+ - **Chevron Rotation Icon** <br> Parameters list:
+    - **isSelected**: state handle
+    - **size**: icon size
+    - **duration**: animation duration
+    - **from**: starting rotation of the chevron
