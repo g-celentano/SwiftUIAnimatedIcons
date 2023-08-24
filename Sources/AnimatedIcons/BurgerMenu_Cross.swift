@@ -7,8 +7,7 @@
 
 import SwiftUI
 
-@available(iOS 13.0, *)
-@available(macOS 10.0, *)
+
 /// BurgerMenu_Cross Icon
 /// From Burger menu icon to cross icon
 /// **parameters list**:
@@ -17,6 +16,9 @@ import SwiftUI
 /// - **{burger, cross}Color**: color of the specified icon in-between _{}_
 /// - **duration**: animation duration
 /// - **isRounded**: rounded line-caps flag
+
+@available(iOS 13.0, *)
+@available(macOS 10.15, *)
 public struct BurgerMenu_Cross: View {
     public init(menuState: Binding<Bool>, size: CGFloat = 24, burgerColor: Color = .black, crossColor: Color = .black, duration: CGFloat = 0.35, isRounded: Bool = false) {
         _isMenuOpen = menuState
@@ -83,7 +85,7 @@ public struct BurgerMenu_Cross: View {
 }
 
 @available(iOS 13.0, *)
-@available(macOS 10.0, *)
+@available(macOS 10.15, *)
 struct SwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
         BurgerMenu_Cross(menuState: .constant(false), size: 150)

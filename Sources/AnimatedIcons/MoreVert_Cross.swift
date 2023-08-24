@@ -8,8 +8,7 @@
 import Foundation
 import SwiftUI
 
-@available(iOS 13.0, *)
-@available(macOS 10.15, *)
+
 /// MoreVert-Cross Animated Icon
 /// From vetically arranged more dots to cross icon
 /// Parameters list:
@@ -19,6 +18,8 @@ import SwiftUI
 ///     - **size**: icon size
 ///     - **duration**: animation duration
 ///     - **{dots, cross}color**: color for each category in-between _{}_
+@available(iOS 13.0, *)
+@available(macOS 10.15, *)
 public struct MoreVert_Cross: View {
     public init(isSelected: Binding<Bool>, size: CGFloat = 24.0, duration: CGFloat = 0.1,
                 dotsColor: Color = .black, crossColor: Color = .black, isRounded: Bool = false)

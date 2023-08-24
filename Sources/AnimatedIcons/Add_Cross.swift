@@ -7,8 +7,7 @@
 
 import SwiftUI
 
-@available(iOS 13.0, *)
-@available(macOS 10.0, *)
+
 /// Add-Cross Animated Icon
 /// From plus icon to cross icon
 /// **Parameters list**:
@@ -19,6 +18,8 @@ import SwiftUI
 ///  - **duration**: animation duration
 ///  - **plusColor** : plus icon color
 ///  - **crossColor** : cross icon color
+@available(iOS 13.0, *)
+@available(macOS 10.15, *)
 public struct Add_Cross: View {
     public init(isSelected: Binding<Bool>, size: CGFloat = 24.0, duration: CGFloat = 0.25,
                 plusColor: Color = .black, crossColor: Color = .black, isRounded: Bool = false)
@@ -59,8 +60,9 @@ public struct Add_Cross: View {
     }
 }
 
+
 @available(iOS 13.0, *)
-@available(macOS 10.0, *)
+@available(macOS 10.15, *)
 struct AddCross_Previews: PreviewProvider {
     static var previews: some View {
         Add_Cross(isSelected: .constant(false), isRounded: false)

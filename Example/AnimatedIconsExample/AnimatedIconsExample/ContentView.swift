@@ -21,7 +21,7 @@ struct ContentView: View {
             Text(isSelectedHorizontal ? "cross" : "more horizontal")
             Add_Cross(isSelected: $isSelectedAdd, size: 80, plusColor: .red, crossColor: .blue)
             Text(isSelectedAdd ? "cross" : "plus")
-            BurgerMenu_Cross(menuState: $isMenuOpen, size: 100, isRounded: true)
+            BurgerMenu_Cross(menuState: $isMenuOpen, isRounded: true)
             Text(isMenuOpen ? "cross" : "burger menu")
         }
         .padding()
