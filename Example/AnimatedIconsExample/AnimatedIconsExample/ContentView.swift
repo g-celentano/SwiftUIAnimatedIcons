@@ -8,26 +8,59 @@
 import AnimatedIcons
 import SwiftUI
 
+/**
+ MoreVert_Cross(isSelected: $isSelectedVertical, duration: 0.75)
+ Text(isSelectedVertical ? "cross" : "more vertical")
+ MoreHor_Cross(isSelected: $isSelectedHorizontal, size: 150)
+ Text(isSelectedHorizontal ? "cross" : "more horizontal")
+ Add_Cross(isSelected: $isSelectedAdd, size: 80, plusColor: .red, crossColor: .blue)
+ Text(isSelectedAdd ? "cross" : "plus")
+ BurgerMenu_Cross(menuState: $isMenuOpen, isRounded: true)
+ Text(isMenuOpen ? "cross" : "burger menu")
+ ChevronRotation(isSelected: $isChevronSelected, from: .right, to: .bottom, lineCaps: .pointy)
+ Text(isChevronSelected ? "to" : "from")
+ */
+
 struct ContentView: View {
-    @State var isSelectedVertical: Bool = false
-    @State var isSelectedHorizontal: Bool = false
-    @State var isSelectedAdd: Bool = false
-    @State var isMenuOpen: Bool = false
-    @State var isChevronSelected: Bool = false
+    @State var onScreenState: Bool = false
+    @State var availableIcons = ["MoreVert_Cross", "MoreHor_Cross", "Add_Cross", "Burger_Cross", "Chevron Rotation"]
+    @State var selectedIcons = "MoreVert_Cross"
     var body: some View {
         VStack {
-            MoreVert_Cross(isSelected: $isSelectedVertical, duration: 0.75)
-            Text(isSelectedVertical ? "cross" : "more vertical")
-            MoreHor_Cross(isSelected: $isSelectedHorizontal, size: 150)
-            Text(isSelectedHorizontal ? "cross" : "more horizontal")
-            Add_Cross(isSelected: $isSelectedAdd, size: 80, plusColor: .red, crossColor: .blue)
-            Text(isSelectedAdd ? "cross" : "plus")
-            BurgerMenu_Cross(menuState: $isMenuOpen, isRounded: true)
-            Text(isMenuOpen ? "cross" : "burger menu")
-            ChevronRotation(isSelected: $isChevronSelected, from: .right, to: .bottom, lineCaps: .pointy)
-            Text(isChevronSelected ? "to" : "from")
+            Picker(selection: $selectedIcons) {
+                ForEach(availableIcons, id: \.self) { icon in
+                    Text("\(icon)")
+                }
+            } label: {
+                Text("AnimatedIcons")
+            }
+            Spacer()
+            switch selectedIcons {
+            case "MoreVert_Cross":
+                MoreVert_Cross(isSelected: $onScreenState, duration: 0.75)
+                Text(onScreenState ? "cross" : "more vertical")
+            case "MoreHor_Cross":
+                MoreHor_Cross(isSelected: $onScreenState, size: 150)
+                Text(onScreenState ? "cross" : "more horizontal")
+            case "Add_Cross":
+                Add_Cross(isSelected: $onScreenState, size: 80, plusColor: .red, crossColor: .blue)
+                Text(onScreenState ? "cross" : "plus")
+            case "Burger_Cross":
+                BurgerMenu_Cross(menuState: $onScreenState, isRounded: true)
+                Text(onScreenState ? "cross" : "burger menu")
+            case "Chevron Rotation":
+                ChevronRotation(isSelected: $onScreenState, from: .right, to: .bottom, lineCaps: .pointy)
+                Text(onScreenState ? "to" : "from")
+            default:
+                Text("Select an icon")
+            }
+            Spacer()
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         .padding()
+        .onChange(of: selectedIcons) { _ in
+            onScreenState = false
+        }
     }
 }
 
