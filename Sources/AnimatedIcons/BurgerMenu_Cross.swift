@@ -9,9 +9,9 @@ import SwiftUI
 
 @available(iOS 13.0, *)
 @available(macOS 10.0, *)
-///BurgerMenu_Cross Icon
-///From Burger menu icon to cross icon
-///**parameters list**:
+/// BurgerMenu_Cross Icon
+/// From Burger menu icon to cross icon
+/// **parameters list**:
 /// - **menuState**: state handle value
 /// - **size**: icon size
 /// - **{burger, cross}Color**: color of the specified icon in-between _{}_
@@ -42,43 +42,42 @@ public struct BurgerMenu_Cross: View {
                 .frame(width: size, height: size * 0.15)
                 .cornerRadius(isRounded ? size * 0.5 : size * 0.05)
                 .offset(x: 0, y: isMenuOpening ? 0 : -size * 0.225)
-                .rotationEffect(isMenuOpen ? .degrees(55) : .zero)
+                .rotationEffect(isMenuOpen ? .degrees(45) : .zero)
 
             // bottom one
             Rectangle()
                 .frame(width: size, height: size * 0.15)
                 .cornerRadius(isRounded ? size * 0.5 : size * 0.05)
                 .offset(x: 0, y: isMenuOpening ? 0 : size * 0.225)
-                .rotationEffect(isMenuOpen ? .degrees(55) : .zero)
+                .rotationEffect(isMenuOpen ? .degrees(45) : .zero)
 
             // center one
             Rectangle()
                 .frame(width: size, height: size * 0.15)
                 .cornerRadius(isRounded ? size * 0.5 : size * 0.05)
-                .rotationEffect(isMenuOpen ? .degrees(-55) : .zero)
+                .rotationEffect(isMenuOpen ? .degrees(-45) : .zero)
         }
         .frame(width: size, height: size)
         .onTapGesture {
             if isMenuOpen {
-                withAnimation(.linear(duration: duration * 0.75)) {
+                withAnimation(.linear(duration: duration * 0.5)) {
                     isMenuOpen = false
                 }
-                DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.75) {
-                    withAnimation(.linear(duration: duration * 0.25)) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.5) {
+                    withAnimation(.linear(duration: duration * 0.5)) {
                         isMenuOpening = false
                     }
                 }
             } else {
-                withAnimation(.linear(duration: duration * 0.25)) {
+                withAnimation(.linear(duration: duration * 0.5)) {
                     isMenuOpening = true
                 }
-                DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.25) {
-                    withAnimation(.linear(duration: duration * 0.75)) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.5) {
+                    withAnimation(.linear(duration: duration * 0.5)) {
                         isMenuOpen = true
                     }
                 }
             }
-            
         }
     }
 }
