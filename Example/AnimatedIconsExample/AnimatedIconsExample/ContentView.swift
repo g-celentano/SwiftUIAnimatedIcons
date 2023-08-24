@@ -12,6 +12,7 @@ struct ContentView: View {
     @State var isSelectedVertical: Bool = false
     @State var isSelectedHorizontal: Bool = false
     @State var isSelectedAdd: Bool = false
+    @State var isMenuOpen: Bool = false
     var body: some View {
         VStack {
             MoreVert_Cross(isSelected: $isSelectedVertical, duration: 0.75)
@@ -20,6 +21,8 @@ struct ContentView: View {
             Text(isSelectedHorizontal ? "cross" : "more horizontal")
             Add_Cross(isSelected: $isSelectedAdd, size: 80, plusColor: .red, crossColor: .blue)
             Text(isSelectedAdd ? "cross" : "plus")
+            BurgerMenu_Cross(menuState: $isMenuOpen, size: 100, isRounded: true)
+            Text(isMenuOpen ? "cross" : "burger menu")
         }
         .padding()
     }
