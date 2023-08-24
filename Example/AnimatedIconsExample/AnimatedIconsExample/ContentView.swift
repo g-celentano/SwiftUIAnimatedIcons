@@ -24,8 +24,8 @@ struct ContentView: View {
             Text(isSelectedAdd ? "cross" : "plus")
             BurgerMenu_Cross(menuState: $isMenuOpen, isRounded: true)
             Text(isMenuOpen ? "cross" : "burger menu")
-            ChevronRotation(isSelected: $isChevronSelected, from: .right, to: .bottom, lineCaps: .squared)
-            Text(isChevronSelected ? "bottom" : "right")
+            ChevronRotation(isSelected: $isChevronSelected, from: .right, to: .bottom, lineCaps: .pointy)
+            Text(isChevronSelected ? "to" : "from")
         }
         .padding()
     }
