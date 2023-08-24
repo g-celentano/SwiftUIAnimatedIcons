@@ -39,21 +39,21 @@ public struct BurgerMenu_Cross: View {
         ZStack {
             // top one
             Rectangle()
-                .frame(width: size, height: size * 0.15)
+                .frame(width: size, height: isMenuOpen ? size * 0.2 : size * 0.15)
                 .cornerRadius(isRounded ? size * 0.5 : size * 0.05)
                 .offset(x: 0, y: isMenuOpening ? 0 : -size * 0.225)
                 .rotationEffect(isMenuOpen ? .degrees(45) : .zero)
 
             // bottom one
             Rectangle()
-                .frame(width: size, height: size * 0.15)
+                .frame(width: size, height: isMenuOpen ? size * 0.2 : size * 0.15)
                 .cornerRadius(isRounded ? size * 0.5 : size * 0.05)
                 .offset(x: 0, y: isMenuOpening ? 0 : size * 0.225)
                 .rotationEffect(isMenuOpen ? .degrees(45) : .zero)
 
             // center one
             Rectangle()
-                .frame(width: size, height: size * 0.15)
+                .frame(width: size, height: isMenuOpen ? size * 0.2 : size * 0.15)
                 .cornerRadius(isRounded ? size * 0.5 : size * 0.05)
                 .rotationEffect(isMenuOpen ? .degrees(-45) : .zero)
         }
