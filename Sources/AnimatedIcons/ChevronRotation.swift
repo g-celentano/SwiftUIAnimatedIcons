@@ -19,8 +19,8 @@ import SwiftUI
 @available(macOS 10.15, *)
 public enum ChevronDirections: CGFloat {
     case top = 0.0
-    case left = 90.0
-    case right = -90.0
+    case left = -90.0
+    case right = 90.0
     case bottom = 180.0
 }
 

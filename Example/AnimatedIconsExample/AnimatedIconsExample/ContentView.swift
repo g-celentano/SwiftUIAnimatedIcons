@@ -13,6 +13,7 @@ struct ContentView: View {
     @State var isSelectedHorizontal: Bool = false
     @State var isSelectedAdd: Bool = false
     @State var isMenuOpen: Bool = false
+    @State var isChevronSelected: Bool = false
     var body: some View {
         VStack {
             MoreVert_Cross(isSelected: $isSelectedVertical, duration: 0.75)
@@ -23,6 +24,8 @@ struct ContentView: View {
             Text(isSelectedAdd ? "cross" : "plus")
             BurgerMenu_Cross(menuState: $isMenuOpen, isRounded: true)
             Text(isMenuOpen ? "cross" : "burger menu")
+            ChevronRotation(isSelected: $isChevronSelected, from: .right, to: .bottom, lineCaps: .squared)
+            Text(isChevronSelected ? "bottom" : "right")
         }
         .padding()
     }
