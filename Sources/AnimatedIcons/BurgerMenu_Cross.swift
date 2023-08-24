@@ -42,20 +42,20 @@ public struct BurgerMenu_Cross: View {
                 .frame(width: size, height: size * 0.15)
                 .cornerRadius(isRounded ? size * 0.5 : size * 0.05)
                 .offset(x: 0, y: isMenuOpening ? 0 : -size * 0.225)
-                .rotationEffect(isMenuOpen ? .degrees(45) : .zero)
+                .rotationEffect(isMenuOpen ? .degrees(55) : .zero)
 
             // bottom one
             Rectangle()
                 .frame(width: size, height: size * 0.15)
                 .cornerRadius(isRounded ? size * 0.5 : size * 0.05)
                 .offset(x: 0, y: isMenuOpening ? 0 : size * 0.225)
-                .rotationEffect(isMenuOpen ? .degrees(35) : .zero)
+                .rotationEffect(isMenuOpen ? .degrees(55) : .zero)
 
             // center one
             Rectangle()
                 .frame(width: size, height: size * 0.15)
                 .cornerRadius(isRounded ? size * 0.5 : size * 0.05)
-                .rotationEffect(isMenuOpen ? .degrees(-35) : .zero)
+                .rotationEffect(isMenuOpen ? .degrees(-55) : .zero)
         }
         .frame(width: size, height: size)
         .onTapGesture {
