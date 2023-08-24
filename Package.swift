@@ -21,7 +21,7 @@ let package = Package(
         .target(
             name: "AnimatedIcons",
             dependencies: [],
-            path: "Sources/AnimatedIcons"),
+            path: "Sources/"),
         .testTarget(
             name: "AnimatedIconsTests",
             dependencies: ["AnimatedIcons"]),
