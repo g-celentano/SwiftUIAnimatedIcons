@@ -37,7 +37,7 @@ public struct Sun_Moon: View {
     public var body: some View {
         ZStack {
             let innerCircleDiameter = isSun ? size * 0.5 : size * 0.7 // -> circle radius = size * 0.25
-            let roundingCirclesDistance = isSun ? size * 0.4 : 0 // 15% more than the circle radius
+            let roundingCirclesDistance = sunDotsOutside ? size * 0.4 : 0 // 15% more than the circle radius
             let roundingCirlcesRadii = isSun ? size * 0.15 : 0
 
             ForEach(0 ..< 8, id: \.self) { index in
