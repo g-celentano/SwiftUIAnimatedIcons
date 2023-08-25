@@ -67,19 +67,19 @@ public struct Sun_Moon: View {
             if isSun {
                 withAnimation(.easeIn(duration: duration * 0.4)) {
                     sunDotsOutside = false
-                    DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.4) {
-                        withAnimation(.easeIn(duration: duration * 0.6)) {
-                            isSun = false
-                        }
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.4) {
+                    withAnimation(.easeIn(duration: duration * 0.6)) {
+                        isSun = false
                     }
                 }
             } else {
                 withAnimation(.easeIn(duration: duration * 0.6)) {
                     isSun = true
-                    DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.6) {
-                        withAnimation(.easeIn(duration: duration * 0.4)) {
-                            sunDotsOutside = true
-                        }
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.6) {
+                    withAnimation(.easeIn(duration: duration * 0.4)) {
+                        sunDotsOutside = true
                     }
                 }
             }
