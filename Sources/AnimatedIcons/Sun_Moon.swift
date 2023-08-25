@@ -53,12 +53,12 @@ public struct Sun_Moon: View {
                 Circle()
                     .frame(width: innerCircleDiameter, height: innerCircleDiameter)
                     .foregroundColor(isSun ? sunColor : moonColor)
-                if !sunDotsOutside {
-                    Circle()
-                        .frame(width: innerCircleDiameter * 0.75, height: innerCircleDiameter * 0.75)
-                        .offset(x: innerCircleDiameter * 0.2, y: -innerCircleDiameter * 0.25)
-                        .blendMode(.destinationOut)
-                }
+
+                Circle()
+                    .frame(width: innerCircleDiameter * 0.75, height: innerCircleDiameter * 0.75)
+                    .offset(x: innerCircleDiameter * 0.2, y: -innerCircleDiameter * 0.25)
+                    .foregroundColor(Color.clear)
+                    .blendMode(isSun ? .sourceOut : .destinationOut)
             }
             .compositingGroup()
         }
