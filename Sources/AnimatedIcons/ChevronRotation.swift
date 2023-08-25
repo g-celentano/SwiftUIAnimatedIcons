@@ -33,7 +33,7 @@ public enum ChevronLineCaps: Int32 {
 @available(iOS 13.0, *)
 @available(macOS 10.15, *)
 public struct ChevronRotation: View {
-    public init(isSelected: Binding<Bool>, size: CGFloat = 24.0, duration: CGFloat = 0.2, from: ChevronDirections, to: ChevronDirections, lineCaps: ChevronLineCaps = .rounded, chevronColor: Color = .black) {
+    public init(_ isSelected: Binding<Bool>, size: CGFloat = 24.0, duration: CGFloat = 0.2, from: ChevronDirections, to: ChevronDirections, lineCaps: ChevronLineCaps = .rounded, chevronColor: Color = .black) {
         _isSelected = isSelected
         self.size = size
         self.duration = duration
@@ -70,7 +70,7 @@ public struct ChevronRotation: View {
 @available(macOS 10.15, *)
 struct ChevronRotation_Previews: PreviewProvider {
     static var previews: some View {
-        ChevronRotation(isSelected: .constant(false), size: 200, from: .top, to: .right)
+        ChevronRotation( .constant(false), size: 200, from: .top, to: .right)
     }
 }
 

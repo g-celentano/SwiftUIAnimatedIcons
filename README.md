@@ -33,7 +33,12 @@
     - **duration**: animation duration
     - **isRounded**: rounded line-caps flag
  - **Chevron Rotation Icon** <br> Parameters list:
-    - **isSelected**: state handle
+    - **isSelected**: state handle value
     - **size**: icon size
     - **duration**: animation duration
     - **from**: starting rotation of the chevron
+ -  **Sun-Moon icon** <br> Parameters list:
+     - **isSun**: state handle value
+     - **size**: icon size
+     - **duration**: animation duration
+     - **{sun, moon}Color**: color of the indicated icon

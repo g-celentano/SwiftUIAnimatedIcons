@@ -8,7 +8,6 @@
 import Foundation
 import SwiftUI
 
-
 /// MoreVert-Cross Animated Icon
 /// From vetically arranged more dots to cross icon
 /// Parameters list:
@@ -21,7 +20,7 @@ import SwiftUI
 @available(iOS 13.0, *)
 @available(macOS 10.15, *)
 public struct MoreVert_Cross: View {
-    public init(isSelected: Binding<Bool>, size: CGFloat = 24.0, duration: CGFloat = 0.1,
+    public init(_ isSelected: Binding<Bool>, size: CGFloat = 24.0, duration: CGFloat = 0.1,
                 dotsColor: Color = .black, crossColor: Color = .black, isRounded: Bool = false)
     {
         _isSelected = isSelected
@@ -76,6 +75,6 @@ public struct MoreVert_Cross: View {
 @available(macOS 10.15, *)
 struct MoreVert_Cross_Previews: PreviewProvider {
     static var previews: some View {
-        MoreVert_Cross(isSelected: .constant(true), size: 200, isRounded: true)
+        MoreVert_Cross(.constant(true), size: 200, isRounded: true)
     }
 }

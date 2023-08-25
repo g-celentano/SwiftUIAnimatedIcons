@@ -8,7 +8,6 @@
 import Foundation
 import SwiftUI
 
-
 /// MoreHor-Cross Animated Icon
 /// From horizontally arranged more dots to cross icon.
 /// Parameters list:
@@ -21,8 +20,9 @@ import SwiftUI
 @available(iOS 13.0, *)
 @available(macOS 10.15, *)
 public struct MoreHor_Cross: View {
-    public init(isSelected: Binding<Bool>, size: CGFloat = 24.0, duration: CGFloat = 0.1,
-                dotsColor: Color = .black, crossColor: Color = .black, isRounded: Bool = false) {
+    public init(_ isSelected: Binding<Bool>, size: CGFloat = 24.0, duration: CGFloat = 0.1,
+                dotsColor: Color = .black, crossColor: Color = .black, isRounded: Bool = false)
+    {
         _isSelected = isSelected
         self.size = size
         self.duration = duration
@@ -74,6 +74,6 @@ public struct MoreHor_Cross: View {
 @available(macOS 10.15, *)
 struct MoreHor_Cross_Previews: PreviewProvider {
     static var previews: some View {
-        MoreHor_Cross(isSelected: .constant(true), size: 48, isRounded: true)
+        MoreHor_Cross( .constant(true), size: 48, isRounded: true)
     }
 }
