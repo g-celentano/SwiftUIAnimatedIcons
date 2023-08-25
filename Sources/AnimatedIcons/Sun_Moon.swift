@@ -66,24 +66,21 @@ public struct Sun_Moon: View {
             if isSun {
                 withAnimation(.linear(duration: duration * 0.5)) {
                     sunDotsOutside = false
-                    isSun = false
                 }
-                /*DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.5) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + duration * 2) {
                     withAnimation(.linear(duration: duration * 0.5)) {
                         isSun = false
                     }
-                }*/
+                }
             } else {
                 withAnimation(.linear(duration: duration * 0.5)) {
                     isSun = true
-                    sunDotsOutside = true
                 }
-                /*
-                DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.5) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + duration * 2) {
                     withAnimation(.linear(duration: duration * 0.5)) {
                         sunDotsOutside = true
                     }
-                }*/
+                }
             }
         }
     }
