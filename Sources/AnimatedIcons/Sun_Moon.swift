@@ -67,6 +67,7 @@ public struct Sun_Moon: View {
                 withAnimation(.linear(duration: duration * 0.5)) {
                     sunDotsOutside = false
                 }
+                // does not wait the deadline to make the code run
                 DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.5) {
                     withAnimation(.linear(duration: duration * 0.5)) {
                         isSun = false
@@ -76,6 +77,7 @@ public struct Sun_Moon: View {
                 withAnimation(.linear(duration: duration * 0.5)) {
                     isSun = true
                 }
+                // does not wait the deadline to make the code run
                 DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.5) {
                     withAnimation(.linear(duration: duration * 0.5)) {
                         sunDotsOutside = true
