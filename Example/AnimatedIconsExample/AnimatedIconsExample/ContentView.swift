@@ -52,7 +52,7 @@ struct ContentView: View {
                 ChevronRotation($onScreenState, from: .right, to: .bottom, lineCaps: .pointy)
                 Text(onScreenState ? "to" : "from")
             case "Sun_Moon":
-                Sun_Moon($onScreenState, size: 200, sunColor: .cyan, moonColor: .red)
+                Sun_Moon($onScreenState, size: 200, duration: 1, sunColor: .cyan, moonColor: .red)
                 Text(onScreenState ? "isSun" : "isMoon")
             default:
                 Text("Select an icon")
