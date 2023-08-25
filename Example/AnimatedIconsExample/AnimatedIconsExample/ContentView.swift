@@ -46,7 +46,7 @@ struct ContentView: View {
                 Add_Cross($onScreenState, size: 80, plusColor: .red, crossColor: .blue)
                 Text(onScreenState ? "cross" : "plus")
             case "Burger_Cross":
-                BurgerMenu_Cross($onScreenState, isRounded: true)
+                BurgerMenu_Cross($onScreenState, size: 200, isRounded: true)
                 Text(onScreenState ? "cross" : "burger menu")
             case "Chevron Rotation":
                 ChevronRotation($onScreenState, from: .right, to: .bottom, lineCaps: .rounded)
