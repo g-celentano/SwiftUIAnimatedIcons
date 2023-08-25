@@ -55,9 +55,9 @@ public struct Sun_Moon: View {
                     .foregroundColor(isSun ? sunColor : moonColor)
 
                 Circle()
-                    .frame(width: innerCircleDiameter * 0.75, height: innerCircleDiameter * 0.75)
+                    .frame(width: isSun ? 0 : innerCircleDiameter * 0.75, height: isSun ? 0 : innerCircleDiameter * 0.75)
                     .offset(x: innerCircleDiameter * 0.2, y: -innerCircleDiameter * 0.25)
-                    .blendMode(isSun ? .sourceAtop : .destinationOut)
+                    .blendMode(.destinationOut)
             }
             .compositingGroup()
         }
