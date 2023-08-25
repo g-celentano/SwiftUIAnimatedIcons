@@ -40,7 +40,7 @@ public struct Sun_Moon: View {
     @State private var moonColor: Color
     @State private var sunRaysShape: SunRayShape
 
-    @State private var sunDotsOutside: Bool = true
+    @State private var sunDotsOutside: Bool = false
 
     public var body: some View {
         ZStack {
@@ -90,7 +90,7 @@ public struct Sun_Moon: View {
                 withAnimation(.linear(duration: duration * 0.5)) {
                     sunDotsOutside = false
                 }
-                DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.5) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.55) {
                     withAnimation(.linear(duration: duration * 0.5)) {
                         isSun = false
                     }
