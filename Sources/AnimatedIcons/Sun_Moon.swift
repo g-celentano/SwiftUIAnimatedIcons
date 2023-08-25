@@ -18,7 +18,7 @@ import SwiftUI
 @available(iOS 13.0, *)
 @available(macOS 10.15, *)
 public struct Sun_Moon: View {
-    public init(_ isSun: Binding<Bool>, size: CGFloat = 24.0, duration: CGFloat = 0.2, sunColor: Color = .black, moonColor: Color = .black) {
+    public init(_ isSun: Binding<Bool>, size: CGFloat = 24.0, duration: CGFloat = 0.35, sunColor: Color = .black, moonColor: Color = .black) {
         _isSun = isSun
         self.size = size
         self.duration = duration
@@ -67,7 +67,6 @@ public struct Sun_Moon: View {
                 withAnimation(.linear(duration: duration * 0.5)) {
                     sunDotsOutside = false
                 }
-                // does not wait the deadline to make the code run
                 DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.5) {
                     withAnimation(.linear(duration: duration * 0.5)) {
                         isSun = false
@@ -77,7 +76,6 @@ public struct Sun_Moon: View {
                 withAnimation(.linear(duration: duration * 0.5)) {
                     isSun = true
                 }
-                // does not wait the deadline to make the code run
                 DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.5) {
                     withAnimation(.linear(duration: duration * 0.5)) {
                         sunDotsOutside = true
