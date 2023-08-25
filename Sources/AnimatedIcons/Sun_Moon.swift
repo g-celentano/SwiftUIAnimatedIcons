@@ -68,8 +68,10 @@ public struct Sun_Moon: View {
                     sunDotsOutside = false
                 }
                 DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.5) {
+                    print("after \(duration * 0.5)")
                     withAnimation(.linear(duration: duration * 0.5)) {
                         isSun = false
+                        print("second animation -- \(isSun)")
                     }
                 }
             } else {
@@ -77,8 +79,10 @@ public struct Sun_Moon: View {
                     isSun = true
                 }
                 DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.5) {
+                    print("after \(duration * 0.5)")
                     withAnimation(.linear(duration: duration * 0.5)) {
                         sunDotsOutside = true
+                        print("second animation \(sunDotsOutside)")
                     }
                 }
             }

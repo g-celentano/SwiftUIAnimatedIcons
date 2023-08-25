@@ -49,10 +49,10 @@ struct ContentView: View {
                 BurgerMenu_Cross($onScreenState, isRounded: true)
                 Text(onScreenState ? "cross" : "burger menu")
             case "Chevron Rotation":
-                ChevronRotation($onScreenState, from: .right, to: .bottom, lineCaps: .pointy)
+                ChevronRotation($onScreenState, from: .right, to: .bottom, lineCaps: .rounded)
                 Text(onScreenState ? "to" : "from")
             case "Sun_Moon":
-                Sun_Moon($onScreenState, size: 200, duration: 1, sunColor: .cyan, moonColor: .red)
+                Sun_Moon($onScreenState, size: 200)
                 Text(onScreenState ? "isSun" : "isMoon")
             default:
                 Text("Select an icon")
