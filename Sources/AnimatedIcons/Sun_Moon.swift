@@ -64,20 +64,20 @@ public struct Sun_Moon: View {
         .frame(width: size, height: size)
         .onTapGesture {
             if isSun {
-                withAnimation(.easeIn(duration: duration * 0.5)) {
+                withAnimation(.linear(duration: duration * 0.5)) {
                     sunDotsOutside = false
                 }
                 DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.5) {
-                    withAnimation(.easeIn(duration: duration * 0.5)) {
+                    withAnimation(.linear(duration: duration * 0.5)) {
                         isSun = false
                     }
                 }
             } else {
-                withAnimation(.easeIn(duration: duration * 0.5)) {
+                withAnimation(.linear(duration: duration * 0.5)) {
                     isSun = true
                 }
                 DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.5) {
-                    withAnimation(.easeIn(duration: duration * 0.5)) {
+                    withAnimation(.linear(duration: duration * 0.5)) {
                         sunDotsOutside = true
                     }
                 }
