@@ -23,7 +23,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State var onScreenState: Bool = false
-    @State var availableIcons = ["MoreVert_Cross", "MoreHor_Cross", "Add_Cross", "Burger_Cross", "Chevron Rotation"]
+    @State var availableIcons = ["MoreVert_Cross", "MoreHor_Cross", "Add_Cross", "Burger_Cross", "Chevron Rotation", "Sun_Moon"]
     @State var selectedIcons = "MoreVert_Cross"
     var body: some View {
         VStack {
@@ -37,20 +37,23 @@ struct ContentView: View {
             Spacer()
             switch selectedIcons {
             case "MoreVert_Cross":
-                MoreVert_Cross(isSelected: $onScreenState, duration: 0.75)
+                MoreVert_Cross($onScreenState, duration: 0.75)
                 Text(onScreenState ? "cross" : "more vertical")
             case "MoreHor_Cross":
-                MoreHor_Cross(isSelected: $onScreenState, size: 150)
+                MoreHor_Cross($onScreenState, size: 150)
                 Text(onScreenState ? "cross" : "more horizontal")
             case "Add_Cross":
-                Add_Cross(isSelected: $onScreenState, size: 80, plusColor: .red, crossColor: .blue)
+                Add_Cross($onScreenState, size: 80, plusColor: .red, crossColor: .blue)
                 Text(onScreenState ? "cross" : "plus")
             case "Burger_Cross":
-                BurgerMenu_Cross(menuState: $onScreenState, isRounded: true)
+                BurgerMenu_Cross($onScreenState, isRounded: true)
                 Text(onScreenState ? "cross" : "burger menu")
             case "Chevron Rotation":
-                ChevronRotation(isSelected: $onScreenState, from: .right, to: .bottom, lineCaps: .pointy)
+                ChevronRotation($onScreenState, from: .right, to: .bottom, lineCaps: .pointy)
                 Text(onScreenState ? "to" : "from")
+            case "Sun_Moon":
+                Sun_Moon($onScreenState, size: 200, sunColor: .cyan, moonColor: .red)
+                Text(onScreenState ? "isSun" : "isMoon")
             default:
                 Text("Select an icon")
             }

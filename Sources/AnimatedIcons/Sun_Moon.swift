@@ -40,6 +40,7 @@ public struct Sun_Moon: View {
             ZStack {
                 Circle()
                     .frame(width: innerCircleDiameter, height: innerCircleDiameter)
+                    .foregroundColor(isSun ? sunColor : moonColor)
                 if !isSun {
                     Circle()
                         .frame(width: innerCircleDiameter * 0.75, height: innerCircleDiameter * 0.75)
@@ -55,6 +56,7 @@ public struct Sun_Moon: View {
                 Circle()
                     .frame(width: roundingCirlcesRadii)
                     .offset(x: xOffset, y: yOffset)
+                    .foregroundColor(sunColor)
             }
         }
         .frame(width: size, height: size)
