@@ -4,11 +4,11 @@
 
 ## Currently supported:
 
-<details open>
+<details>
 <summary>Menu Icons:</summary>
     <ul>
         <li>
-            <details open>
+            <details>
                 <summary><b>MoreVert-Cross Animated Icon</b></summary>Parameters list:
                 <ul>
                     <li> <b>isSelected</b>: state handle value </li>
@@ -23,7 +23,7 @@
             </details>
         </li>
         <li>
-            <details open>
+            <details>
                 <summary><b>MoreHor-Cross Animated Icon<b></summary>Parameters list:
                 <ul>
                     <li> <b>isSelected</b>: state handle value
@@ -39,7 +39,7 @@
             </details>
         </li>
         <li>
-            <details open>
+            <details  >
                 <summary><b>Add-Cross Animated Icon<b></summary>Parameters list:
                 <ul>
                 <li> <b>isSelected</b>: state handle value:
@@ -56,7 +56,7 @@
             </details>
         </li>
         <li> 
-            <details open>
+            <details  >
                 <summary><b>BurgerMenu_Cross Icon<b></summary>Parameters list:
                 <ul>
                     <li> <b>menuState</b>: state handle value
@@ -73,7 +73,7 @@
             </details>
         </li>
         <li> 
-            <details open>
+            <details  >
                 <summary><b>Chevron Rotation Icon<b> </summary>Parameters list:
                 <ul>
                     <li> <b>isSelected</b>: state handle value</li>
@@ -85,16 +85,36 @@
         </li>
     </ul>
 </details>
-- Light/Dark mode icons:
-    -  <b>Sun-Moon icon<b> <br> Parameters list:
-         - <b>isSun</b>: state handle value
-         - <b>size</b>: icon size
-         - <b>duration</b>: animation duration
-         - <b>{sun, moon}Color</b>: color of the indicated icon
-- Loading icons:
-    -  <b>LoadingSpinner animation:<b><br>Parameters list:
-         - <b>loadingAmount</b>: spinner "drawed" amount (from 0 to 360)
-         - <b>size</b>: icon size
-         - <b>color</b>: icon color
-         - <b>isRounded</b>: are lineCaps rounded?
-         - <b>rotationSpeed</b>: multiplicative constant for animation speed management
+<details>
+<summary> Light/Dark mode icons:</summary>
+    <ul>
+        <li>
+        <details>
+            <summary><b>Sun-Moon icon<b></summary>Parameters list:
+            <ul>
+                <li> <b>isSun</b>: state handle value</li>
+                <li> <b>size</b>: icon size</li>
+                <li> <b>duration</b>: animation duration</li>
+                <li> <b>{sun, moon}Color</b>: color of the indicated icon</li>
+            </ul>
+        </details>
+        </li>
+    </ul>
+</details>
+<details>
+    <summary>Loading icons:</summary>
+    <ul>
+        <li>
+        <details>
+            <summary><b>LoadingSpinner animation:<b></summary>Parameters list:
+            <ul>
+                <li> <b>loadingAmount</b>: spinner "drawed" amount (from 0 to 360)</li>
+                <li> <b>size</b>: icon size</li>
+                <li> <b>color</b>: icon color</li>
+                <li> <b>isRounded</b>: are lineCaps rounded?</li>
+                <li> <b>rotationSpeed</b>: multiplicative constant for animation speed management</li>
+            </ul>
+        </details>
+        </li>
+    </ul>
+</details>
