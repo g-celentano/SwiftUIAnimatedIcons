@@ -89,7 +89,7 @@ public struct Sun_Moon: View {
         .onTapGesture {
             if isSun {
                 withAnimation(.linear(duration: duration * 0.075)) {
-                    sunDotsDistance = size * 0.45
+                    sunDotsDistance = size * 0.5
                 }
                 DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.075) {
                     withAnimation(.linear(duration: duration * 0.425)) {
@@ -108,7 +108,7 @@ public struct Sun_Moon: View {
                 }
                 DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.5) {
                     withAnimation(.linear(duration: duration * 0.425)) {
-                        sunDotsDistance = size * 0.45
+                        sunDotsDistance = size * 0.5
                     }
                     DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.425) {
                         withAnimation(.linear(duration: duration * 0.075)) {
