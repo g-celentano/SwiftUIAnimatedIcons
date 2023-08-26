@@ -5,11 +5,11 @@
 ## Currently supported:
 
 <details>
-<summary>Menu Icons:</summary>
+<summary><b>Menu Icons:</b></summary>
     <ul>
         <li>
             <details>
-                <summary><b>MoreVert-Cross Animated Icon</b></summary>Parameters list:
+                <summary>MoreVert-Cross Animated Icon</summary>Parameters list:
                 <ul>
                     <li> <b>isSelected</b>: state handle value </li>
                         <ul>
@@ -24,7 +24,7 @@
         </li>
         <li>
             <details>
-                <summary><b>MoreHor-Cross Animated Icon</b></summary>Parameters list:
+                <summary>MoreHor-Cross Animated Icon</summary>Parameters list:
                 <ul>
                     <li> <b>isSelected</b>: state handle value
                     <ul>
@@ -39,8 +39,8 @@
             </details>
         </li>
         <li>
-            <details  >
-                <summary><b>Add-Cross Animated Icon</b></summary>Parameters list:
+            <details>
+                <summary>Add-Cross Animated Icon</summary>Parameters list:
                 <ul>
                 <li> <b>isSelected</b>: state handle value:
                     <ul>
@@ -57,7 +57,7 @@
         </li>
         <li> 
             <details  >
-                <summary><b>BurgerMenu_Cross Icon</b></summary>Parameters list:
+                <summary>BurgerMenu_Cross Icon</summary>Parameters list:
                 <ul>
                     <li> <b>menuState</b>: state handle value
                     <ul>
@@ -74,7 +74,7 @@
         </li>
         <li> 
             <details  >
-                <summary><b>Chevron Rotation Icon</b></summary>Parameters list:
+                <summary>Chevron Rotation Icon</summary>Parameters list:
                 <ul>
                     <li> <b>isSelected</b>: state handle value</li>
                     <li> <b>size</b>: icon size</li>
@@ -86,11 +86,11 @@
     </ul>
 </details>
 <details>
-<summary> Light/Dark mode icons:</summary>
+<summary><b>Light/Dark mode icons:</b> </summary>
     <ul>
         <li>
         <details>
-            <summary><b>Sun-Moon icon</b></summary>Parameters list:
+            <summary>Sun-Moon icon</summary>Parameters list:
             <ul>
                 <li> <b>isSun</b>: state handle value</li>
                 <li> <b>size</b>: icon size</li>
@@ -102,11 +102,11 @@
     </ul>
 </details>
 <details>
-    <summary>Loading icons:</summary>
+    <summary><b>Loading icons:</b></summary>
     <ul>
         <li>
         <details>
-            <summary><b>LoadingSpinner animation:</b></summary>Parameters list:
+            <summary>LoadingSpinner animation:</summary>Parameters list:
             <ul>
                 <li> <b>loadingAmount</b>: spinner "drawed" amount (from 0 to 360)</li>
                 <li> <b>size</b>: icon size</li>
