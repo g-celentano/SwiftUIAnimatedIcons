@@ -24,7 +24,7 @@
         </li>
         <li>
             <details>
-                <summary><b>MoreHor-Cross Animated Icon<b></summary>Parameters list:
+                <summary><b>MoreHor-Cross Animated Icon</b></summary>Parameters list:
                 <ul>
                     <li> <b>isSelected</b>: state handle value
                     <ul>
@@ -40,7 +40,7 @@
         </li>
         <li>
             <details  >
-                <summary><b>Add-Cross Animated Icon<b></summary>Parameters list:
+                <summary><b>Add-Cross Animated Icon</b></summary>Parameters list:
                 <ul>
                 <li> <b>isSelected</b>: state handle value:
                     <ul>
@@ -57,7 +57,7 @@
         </li>
         <li> 
             <details  >
-                <summary><b>BurgerMenu_Cross Icon<b></summary>Parameters list:
+                <summary><b>BurgerMenu_Cross Icon</b></summary>Parameters list:
                 <ul>
                     <li> <b>menuState</b>: state handle value
                     <ul>
@@ -74,7 +74,7 @@
         </li>
         <li> 
             <details  >
-                <summary><b>Chevron Rotation Icon<b> </summary>Parameters list:
+                <summary><b>Chevron Rotation Icon</b></summary>Parameters list:
                 <ul>
                     <li> <b>isSelected</b>: state handle value</li>
                     <li> <b>size</b>: icon size</li>
@@ -90,7 +90,7 @@
     <ul>
         <li>
         <details>
-            <summary><b>Sun-Moon icon<b></summary>Parameters list:
+            <summary><b>Sun-Moon icon</b></summary>Parameters list:
             <ul>
                 <li> <b>isSun</b>: state handle value</li>
                 <li> <b>size</b>: icon size</li>
@@ -106,7 +106,7 @@
     <ul>
         <li>
         <details>
-            <summary><b>LoadingSpinner animation:<b></summary>Parameters list:
+            <summary><b>LoadingSpinner animation:</b></summary>Parameters list:
             <ul>
                 <li> <b>loadingAmount</b>: spinner "drawed" amount (from 0 to 360)</li>
                 <li> <b>size</b>: icon size</li>
