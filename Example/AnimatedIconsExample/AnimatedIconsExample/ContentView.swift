@@ -55,7 +55,7 @@ struct ContentView: View {
                 Sun_Moon($onScreenState, size: 200)
                 Text(onScreenState ? "isSun" : "isMoon")
             case "Loading Spinner":
-                LoadingSpinner(loadingAmount: 270, color: .green, rotationSpeed: 1.2)
+                LoadingSpinner(loadingAmount: 270, color: .green, rotationDuration: 1.2)
             default:
                 Text("Select an icon")
             }
