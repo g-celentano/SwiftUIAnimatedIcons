@@ -31,7 +31,7 @@
              <li> <b>size</b>: icon size </li>
              <li> <b>duration</b>: animation duration </li>
              <li> <b>{dots, cross}color</b>: color for each category in-between _{}_ </li>
-         <ul>
+         </ul>
     </li>
     <li><summary><b>Add-Cross Animated Icon<b></summary><br>From plus icon to cross icon.<br>Parameters list:
         <ul>
@@ -59,7 +59,7 @@
         <li> <b>{burger, cross}Color</b>: color of the specified icon in-between _{}_ </li>
         <li> <b>duration</b>: animation duration</li>
         <li> <b>isRounded</b>: rounded line-caps flag</li>
-        <ul>
+        </ul>
     </li>
     <li> <summary><b>Chevron Rotation Icon<b> </summary><br> Parameters list:
     <ul>
