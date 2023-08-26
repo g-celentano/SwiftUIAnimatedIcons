@@ -110,7 +110,7 @@
         <details>
             <summary>LoadingSpinner animation:</summary>Parameters list:
             <ul>
-                <li> <b>loadingAmount</b>: spinner "drawed" amount (from 0 to 360)</li>
+                <li> <b>loadingAmount</b>: spinner "drawed" amount (from 10 to 340, degrees format)</li>
                 <li> <b>size</b>: icon size</li>
                 <li> <b>color</b>: icon color</li>
                 <li> <b>isRounded</b>: are lineCaps rounded?</li>

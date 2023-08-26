@@ -9,7 +9,7 @@ import SwiftUI
 
 /// LoadingSpinner animation:
 /// Parameters list:
-///  - **loadingAmount**: spinner "drawed" amount (from 0 to 360)
+///  - **loadingAmount**: spinner "drawed" amount (from 10 to 340, degrees format)
 ///  - **size**: icon size
 ///  - **color**: icon color
 ///  - **isRounded**: are lineCaps rounded?
@@ -19,8 +19,17 @@ import SwiftUI
 @available(macOS 10.15, *)
 public struct LoadingSpinner: View {
     public init(loadingAmount: CGFloat = 180, size: CGFloat = 24.0, color: Color = .black, isRounded: Bool = true, rotationSpeed: CGFloat = 1.0) {
-        assert(loadingAmount >= 0 && loadingAmount <= 360)
-        self.loadingAmount = loadingAmount
+        var clippedLoadingAmount: CGFloat = 0
+
+        if loadingAmount < 10 {
+            clippedLoadingAmount = 10
+        } else if loadingAmount > 340 {
+            clippedLoadingAmount = 340
+        } else {
+            clippedLoadingAmount = loadingAmount
+        }
+
+        self.loadingAmount = clippedLoadingAmount
         self.size = size
         self.color = color
         self.isRounded = isRounded
@@ -54,6 +63,6 @@ public struct LoadingSpinner: View {
 @available(macOS 10.15, *)
 struct LoadingSinner_Previews: PreviewProvider {
     static var previews: some View {
-        LoadingSpinner(loadingAmount: 300, size: 250)
+        LoadingSpinner(loadingAmount: 500, size: 250)
     }
 }
