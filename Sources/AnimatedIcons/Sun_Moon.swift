@@ -24,7 +24,7 @@ public enum SunRayShape {
 @available(iOS 13.0, *)
 @available(macOS 10.15, *)
 public struct Sun_Moon: View {
-    public init(_ isSun: Binding<Bool>, size: CGFloat = 24.0, duration: CGFloat = 0.35, sunColor: Color = .black, moonColor: Color = .black, sunRayShape: SunRayShape = .roundedRectangle) {
+    public init(_ isSun: Binding<Bool>, size: CGFloat = 24.0, duration: CGFloat = 0.35, sunColor: Color = .black, moonColor: Color = .black, sunRayShape: SunRayShape = .roundedRectangle, bouncy: Bool = true) {
         _isSun = isSun
         self.size = size
         self.duration = duration
@@ -33,6 +33,7 @@ public struct Sun_Moon: View {
         self.sunRaysShape = sunRayShape
         self.sunDotsVisible = isSun.wrappedValue
         self.sunDotsDistance = isSun.wrappedValue ? size * 0.4 : 0
+        self.bouncy = bouncy
     }
 
     @Binding private var isSun: Bool
@@ -44,6 +45,7 @@ public struct Sun_Moon: View {
 
     @State private var sunDotsDistance: CGFloat
     @State private var sunDotsVisible: Bool
+    @State private var bouncy: Bool
 
     public var body: some View {
         ZStack {
@@ -89,36 +91,69 @@ public struct Sun_Moon: View {
         }
         .frame(width: size, height: size)
         .onTapGesture {
-            if isSun {
-                withAnimation(.linear(duration: duration * 0.075)) {
-                    sunDotsDistance = size * 0.5
-                }
-                DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.075) {
-                    withAnimation(.linear(duration: duration * 0.425)) {
-                        sunDotsDistance = 0.0
-                    }
-                    DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.425) {
-                        sunDotsVisible = false
-                        withAnimation(.linear(duration: duration * 0.5)) {
-                            isSun = false
-                        }
-                    }
-                }
-
+            if bouncy {
+                bouncyAnimation()
             } else {
-                withAnimation(.linear(duration: duration * 0.5)) {
-                    isSun = true
+                linearAnimation()
+            }
+        }
+    }
+
+    private func bouncyAnimation() {
+        if isSun {
+            withAnimation(.linear(duration: duration * 0.075)) {
+                sunDotsDistance = size * 0.55
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.075) {
+                withAnimation(.linear(duration: duration * 0.425)) {
+                    sunDotsDistance = 0.0
                 }
-                DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.5) {
-                    sunDotsVisible = true
-                    withAnimation(.linear(duration: duration * 0.425)) {
-                        sunDotsDistance = size * 0.5
+                DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.425) {
+                    sunDotsVisible = false
+                    withAnimation(.linear(duration: duration * 0.5)) {
+                        isSun = false
                     }
-                    DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.425) {
-                        withAnimation(.linear(duration: duration * 0.075)) {
-                            sunDotsDistance = size * 0.4
-                        }
+                }
+            }
+
+        } else {
+            withAnimation(.linear(duration: duration * 0.5)) {
+                isSun = true
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.5) {
+                sunDotsVisible = true
+                withAnimation(.linear(duration: duration * 0.425)) {
+                    sunDotsDistance = size * 0.55
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.425) {
+                    withAnimation(.linear(duration: duration * 0.075)) {
+                        sunDotsDistance = size * 0.4
                     }
+                }
+            }
+        }
+    }
+
+    private func linearAnimation() {
+        if isSun {
+            withAnimation(.linear(duration: duration * 0.5)) {
+                sunDotsDistance = 0.0
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.5) {
+                sunDotsVisible = false
+                withAnimation(.linear(duration: duration * 0.5)) {
+                    isSun = false
+                }
+            }
+
+        } else {
+            withAnimation(.linear(duration: duration * 0.5)) {
+                isSun = true
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.5) {
+                sunDotsVisible = true
+                withAnimation(.linear(duration: duration * 0.5)) {
+                    sunDotsDistance = size * 0.4
                 }
             }
         }
