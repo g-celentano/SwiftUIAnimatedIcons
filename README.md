@@ -13,8 +13,8 @@
                 <ul>
                     <li> <b>isSelected</b>: state handle value </li>
                         <ul>
-                            <li> <b>true<b> state -> cross icon </li>
-                            <li> <b>false<b> state -> horizontal more dots icon </li>
+                            <li> <b>true</b> state -> cross icon </li>
+                            <li> <b>false</b> state -> horizontal more dots icon </li>
                         </ul>
                     <li><b>size</b>: icon size </li>
                     <li><b>duration</b>: animation duration </li>
@@ -28,8 +28,8 @@
                 <ul>
                     <li> <b>isSelected</b>: state handle value
                     <ul>
-                        <li> <b>true<b> state -> cross icon</li>
-                        <li> <b>false<b> state -> horizontal more dots icon</li>
+                        <li> <b>true</b> state -> cross icon</li>
+                        <li> <b>false</b> state -> horizontal more dots icon</li>
                     </ul>
                     </li>
                     <li> <b>size</b>: icon size </li>
@@ -44,8 +44,8 @@
                 <ul>
                 <li> <b>isSelected</b>: state handle value:
                     <ul>
-                    <li> <b>true<b> state -> cross icon</li>
-                    <li> <b>false<b> state -> add icon</li>
+                    <li> <b>true</b> state -> cross icon</li>
+                    <li> <b>false</b> state -> add icon</li>
                     </ul>
                 </li>
                 <li> <b>size</b>: icon size </li>
@@ -61,8 +61,8 @@
                 <ul>
                     <li> <b>menuState</b>: state handle value
                     <ul>
-                        <li> <b>true<b> state -> cross icon</li>
-                        <li> <b>false<b> state -> burger icon</li>
+                        <li> <b>true</b> state -> cross icon</li>
+                        <li> <b>false</b> state -> burger icon</li>
                     </ul>
                     </li>
                     <li> <b>size</b>: icon size</li>
