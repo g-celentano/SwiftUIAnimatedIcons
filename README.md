@@ -8,17 +8,19 @@
 <summary>Menu Icons:</summary>
     <ul>
         <li>
-            <summary><b>MoreVert-Cross Animated Icon</b></summary><br>From vetically arranged more dots to cross icon.<br>Parameters list:
-            <ul>
-                <li> <b>isSelected</b>: state handle value </li>
-                    <ul>
-                        <li> <b>true<b> state -> cross icon </li>
-                        <li> <b>false<b> state -> horizontal more dots icon </li>
-                    </ul>
-                <li><b>size</b>: icon size </li>
-                <li><b>duration</b>: animation duration </li>
-                <li><b>{dots, cross}color</b>: color for each category in-between _{}_ </li>
-            </ul>
+            <details open>
+                <summary><b>MoreVert-Cross Animated Icon</b></summary><br>From vetically arranged more dots to cross icon.<br>Parameters list:
+                <ul>
+                    <li> <b>isSelected</b>: state handle value </li>
+                        <ul>
+                            <li> <b>true<b> state -> cross icon </li>
+                            <li> <b>false<b> state -> horizontal more dots icon </li>
+                        </ul>
+                    <li><b>size</b>: icon size </li>
+                    <li><b>duration</b>: animation duration </li>
+                    <li><b>{dots, cross}color</b>: color for each category in-between _{}_ </li>
+                </ul>
+            </details>
         </li>
         <li>
             <summary><b>MoreHor-Cross Animated Icon<b></summary><br>From horizontally arranged more dots to cross icon.<br>Parameters list:
