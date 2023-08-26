@@ -24,7 +24,7 @@ import SwiftUI
 struct ContentView: View {
     @State var onScreenState: Bool = false
     @State var availableIcons = ["MoreVert_Cross", "MoreHor_Cross", "Add_Cross", "Burger_Cross", "Chevron Rotation", "Sun_Moon"]
-    @State var selectedIcons = ""
+    @State var selectedIcons = "MoreVert_Cross"
     var body: some View {
         VStack {
             Picker(selection: $selectedIcons) {

@@ -31,6 +31,7 @@ public struct Sun_Moon: View {
         self.sunColor = sunColor
         self.moonColor = moonColor
         self.sunRaysShape = sunRayShape
+        self.sunDotsDistance = isSun.wrappedValue ? size * 0.4 : 0
     }
 
     @Binding private var isSun: Bool
@@ -40,18 +41,18 @@ public struct Sun_Moon: View {
     @State private var moonColor: Color
     @State private var sunRaysShape: SunRayShape
 
-    @State private var sunDotsOutside: Bool = false
+    @State private var sunDotsDistance: CGFloat
 
     public var body: some View {
         ZStack {
-            let innerCircleDiameter = isSun ? size * 0.5 : size * 0.7 // -> circle radius = size * 0.25
-            let roundingCirclesDistance = sunDotsOutside ? size * 0.4 : 0 // 15% more than the circle radius
+            let innerCircleDiameter = isSun ? size * 0.5 : size * 0.7 // => circle radius = size * 0.25
+            // let roundingCirclesDistance = sunDotsOutside ? size * 0.4 : 0 // 15% more than the circle radius
             let roundingCirlcesRadii = isSun ? size * 0.15 : 0
 
             ForEach(0 ..< 8, id: \.self) { index in
-                let xOffset = roundingCirclesDistance * cos(.pi / 4 * CGFloat(index))
-                let yOffset = roundingCirclesDistance * sin(.pi / 4 * CGFloat(index))
-                if sunRaysShape == .circle{
+                let xOffset = sunDotsDistance * cos(.pi / 4 * CGFloat(index))
+                let yOffset = sunDotsDistance * sin(.pi / 4 * CGFloat(index))
+                if sunRaysShape == .circle {
                     Circle()
                         .frame(width: roundingCirlcesRadii, height: roundingCirlcesRadii)
                         .offset(x: xOffset, y: yOffset)
@@ -87,21 +88,32 @@ public struct Sun_Moon: View {
         .frame(width: size, height: size)
         .onTapGesture {
             if isSun {
-                withAnimation(.easeInOut(duration: duration * 0.5)) {
-                    sunDotsOutside = false
+                withAnimation(.linear(duration: duration * 0.05)) {
+                    sunDotsDistance = size * 0.5
                 }
-                DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.55) {
-                    withAnimation(.easeInOut(duration: duration * 0.5)) {
-                        isSun = false
+                DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.05) {
+                    withAnimation(.linear(duration: duration * 0.45)) {
+                        sunDotsDistance = 0.0
+                    }
+                    DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.55) {
+                        withAnimation(.linear(duration: duration * 0.5)) {
+                            isSun = false
+                        }
                     }
                 }
+
             } else {
-                withAnimation(.easeInOut(duration: duration * 0.5)) {
+                withAnimation(.linear(duration: duration * 0.5)) {
                     isSun = true
                 }
                 DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.5) {
-                    withAnimation(.easeInOut(duration: duration * 0.5)) {
-                        sunDotsOutside = true
+                    withAnimation(.linear(duration: duration * 0.45)) {
+                        sunDotsDistance = size * 0.5
+                    }
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.45) {
+                        withAnimation(.linear(duration: duration * 0.05)) {
+                            sunDotsDistance = size * 0.4
+                        }
                     }
                 }
             }
