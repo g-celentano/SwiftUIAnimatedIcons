@@ -20,6 +20,8 @@ public enum SunRayShape {
 /// - **size**: icon size
 /// - **duration**: animation duration
 /// - **{sun, moon}Color**: color of the indicated icon
+/// - **sunRayShape**: enum value for sun ray shape ( circle, roundedRectangle, triangle)
+/// - **bouncy**: is the animation bouncy?
 
 @available(iOS 13.0, *)
 @available(macOS 10.15, *)

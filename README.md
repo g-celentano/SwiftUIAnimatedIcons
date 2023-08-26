@@ -96,6 +96,8 @@
                 <li> <b>size</b>: icon size</li>
                 <li> <b>duration</b>: animation duration</li>
                 <li> <b>{sun, moon}Color</b>: color of the indicated icon</li>
+                <li> <b>sunRayShape</b>: enum value for sun ray shape ( circle, roundedRectangle, triangle)</li>
+                <li> <b>bouncy</b>: is the animation bouncy?</li>
             </ul>
         </details>
         </li>

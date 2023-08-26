@@ -19,6 +19,7 @@ import SwiftUI
 @available(macOS 10.15, *)
 public struct LoadingSpinner: View {
     public init(loadingAmount: CGFloat = 180, size: CGFloat = 24.0, color: Color = .black, isRounded: Bool = true, rotationSpeed: CGFloat = 1.0) {
+        assert(loadingAmount >= 0 && loadingAmount <= 360)
         self.loadingAmount = loadingAmount
         self.size = size
         self.color = color
