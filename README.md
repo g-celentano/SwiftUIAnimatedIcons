@@ -50,8 +50,8 @@
                 </li>
                 <li> <b>size</b>: icon size </li>
                 <li> <b>duration</b>: animation duration</li>
-                <li> <b>plusColor<b> : plus icon color</li>
-                <li> <b>crossColor<b> : cross icon color</li>
+                <li> <b>plusColor</b>: plus icon color</li>
+                <li> <b>crossColor</b>: cross icon color</li>
                 </ul>
             </details>
         </li>
