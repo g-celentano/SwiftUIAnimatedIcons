@@ -88,14 +88,14 @@ public struct Sun_Moon: View {
         .frame(width: size, height: size)
         .onTapGesture {
             if isSun {
-                withAnimation(.linear(duration: duration * 0.05)) {
+                withAnimation(.linear(duration: duration * 0.1)) {
                     sunDotsDistance = size * 0.5
                 }
-                DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.05) {
-                    withAnimation(.linear(duration: duration * 0.45)) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.1) {
+                    withAnimation(.linear(duration: duration * 0.4)) {
                         sunDotsDistance = 0.0
                     }
-                    DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.55) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.4) {
                         withAnimation(.linear(duration: duration * 0.5)) {
                             isSun = false
                         }
@@ -107,11 +107,11 @@ public struct Sun_Moon: View {
                     isSun = true
                 }
                 DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.5) {
-                    withAnimation(.linear(duration: duration * 0.45)) {
+                    withAnimation(.linear(duration: duration * 0.4)) {
                         sunDotsDistance = size * 0.5
                     }
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.45) {
-                        withAnimation(.linear(duration: duration * 0.05)) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+                        withAnimation(.linear(duration: duration * 0.1)) {
                             sunDotsDistance = size * 0.4
                         }
                     }
