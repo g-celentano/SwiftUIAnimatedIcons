@@ -18,7 +18,7 @@
                         </ul>
                     <li><b>size</b>: icon size </li>
                     <li><b>duration</b>: animation duration </li>
-                    <li><b>{dots, cross}color</b>: color for each category in-between _{}_ </li>
+                    <li><b>{dots, cross}color</b>: color for each category in-between <i>{}</i> </li>
                 </ul>
             </details>
         </li>
@@ -34,7 +34,7 @@
                     </li>
                     <li> <b>size</b>: icon size </li>
                     <li> <b>duration</b>: animation duration </li>
-                    <li> <b>{dots, cross}color</b>: color for each category in-between _{}_ </li>
+                    <li> <b>{dots, cross}color</b>: color for each category in-between <i>{}</i> </li>
                 </ul>
             </details>
         </li>
@@ -66,7 +66,7 @@
                     </ul>
                     </li>
                     <li> <b>size</b>: icon size</li>
-                    <li> <b>{burger, cross}Color</b>: color of the specified icon in-between _{}_ </li>
+                    <li> <b>{burger, cross}Color</b>: color of the specified icon in-between <i>{}</i> </li>
                     <li> <b>duration</b>: animation duration</li>
                     <li> <b>isRounded</b>: rounded line-caps flag</li>
                 </ul>
