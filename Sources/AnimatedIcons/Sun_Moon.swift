@@ -31,6 +31,7 @@ public struct Sun_Moon: View {
         self.sunColor = sunColor
         self.moonColor = moonColor
         self.sunRaysShape = sunRayShape
+        self.sunDotsVisible = isSun.wrappedValue
         self.sunDotsDistance = isSun.wrappedValue ? size * 0.4 : 0
     }
 
@@ -42,12 +43,13 @@ public struct Sun_Moon: View {
     @State private var sunRaysShape: SunRayShape
 
     @State private var sunDotsDistance: CGFloat
+    @State private var sunDotsVisible: Bool
 
     public var body: some View {
         ZStack {
             let innerCircleDiameter = isSun ? size * 0.5 : size * 0.7 // => circle radius = size * 0.25
             // let roundingCirclesDistance = sunDotsOutside ? size * 0.4 : 0 // 15% more than the circle radius
-            let roundingCirlcesRadii = sunDotsDistance != 0 ? size * 0.15 : 0
+            let roundingCirlcesRadii = sunDotsVisible ? size * 0.15 : 0
 
             ForEach(0 ..< 8, id: \.self) { index in
                 let xOffset = sunDotsDistance * cos(.pi / 4 * CGFloat(index))
@@ -96,6 +98,7 @@ public struct Sun_Moon: View {
                         sunDotsDistance = 0.0
                     }
                     DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.425) {
+                        sunDotsVisible = false
                         withAnimation(.linear(duration: duration * 0.5)) {
                             isSun = false
                         }
@@ -107,6 +110,7 @@ public struct Sun_Moon: View {
                     isSun = true
                 }
                 DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.5) {
+                    sunDotsVisible = true
                     withAnimation(.linear(duration: duration * 0.425)) {
                         sunDotsDistance = size * 0.5
                     }
