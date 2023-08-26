@@ -9,7 +9,7 @@
     <ul>
         <li>
             <details open>
-                <summary><b>MoreVert-Cross Animated Icon</b></summary><br>From vetically arranged more dots to cross icon.<br>Parameters list:
+                <summary><b>MoreVert-Cross Animated Icon</b></summary>Parameters list:
                 <ul>
                     <li> <b>isSelected</b>: state handle value </li>
                         <ul>
@@ -23,57 +23,65 @@
             </details>
         </li>
         <li>
-            <summary><b>MoreHor-Cross Animated Icon<b></summary><br>From horizontally arranged more dots to cross icon.<br>Parameters list:
-            <ul>
-                <li> <b>isSelected</b>: state handle value
+            <details open>
+                <summary><b>MoreHor-Cross Animated Icon<b></summary>Parameters list:
                 <ul>
-                    <li> <b>true<b> state -> cross icon</li>
-                    <li> <b>false<b> state -> horizontal more dots icon</li>
+                    <li> <b>isSelected</b>: state handle value
+                    <ul>
+                        <li> <b>true<b> state -> cross icon</li>
+                        <li> <b>false<b> state -> horizontal more dots icon</li>
+                    </ul>
+                    </li>
+                    <li> <b>size</b>: icon size </li>
+                    <li> <b>duration</b>: animation duration </li>
+                    <li> <b>{dots, cross}color</b>: color for each category in-between _{}_ </li>
                 </ul>
-                </li>
-                <li> <b>size</b>: icon size </li>
-                <li> <b>duration</b>: animation duration </li>
-                <li> <b>{dots, cross}color</b>: color for each category in-between _{}_ </li>
-            </ul>
+            </details>
         </li>
         <li>
-            <summary><b>Add-Cross Animated Icon<b></summary><br>From plus icon to cross icon.<br>Parameters list:
-            <ul>
-            <li> <b>isSelected</b>: state handle value:
+            <details open>
+                <summary><b>Add-Cross Animated Icon<b></summary>Parameters list:
                 <ul>
-                <li> <b>true<b> state -> cross icon</li>
-                <li> <b>false<b> state -> add icon</li>
-                </ul>
-            </li>
-            <li> <b>size</b>: icon size </li>
-            <li> <b>duration</b>: animation duration</li>
-            <li> <b>plusColor<b> : plus icon color</li>
-            <li> <b>crossColor<b> : cross icon color</li>
-            </ul>
-        </li>
-        <li> 
-            <summary><b>BurgerMenu_Cross Icon<b></summary><br>From Burger menu icon to cross icon<br> Parameters list:
-            <ul>
-                <li> <b>menuState</b>: state handle value
-                <ul>
+                <li> <b>isSelected</b>: state handle value:
+                    <ul>
                     <li> <b>true<b> state -> cross icon</li>
-                    <li> <b>false<b> state -> burger icon</li>
-                </ul>
+                    <li> <b>false<b> state -> add icon</li>
+                    </ul>
                 </li>
-                <li> <b>size</b>: icon size</li>
-                <li> <b>{burger, cross}Color</b>: color of the specified icon in-between _{}_ </li>
+                <li> <b>size</b>: icon size </li>
                 <li> <b>duration</b>: animation duration</li>
-                <li> <b>isRounded</b>: rounded line-caps flag</li>
-            </ul>
+                <li> <b>plusColor<b> : plus icon color</li>
+                <li> <b>crossColor<b> : cross icon color</li>
+                </ul>
+            </details>
         </li>
         <li> 
-            <summary><b>Chevron Rotation Icon<b> </summary><br> Parameters list:
-            <ul>
-                <li> <b>isSelected</b>: state handle value</li>
-                <li> <b>size</b>: icon size</li>
-                <li> <b>duration</b>: animation duration</li>
-                <li> <b>from</b>: starting rotation of the chevron</li>
-            </ul>
+            <details open>
+                <summary><b>BurgerMenu_Cross Icon<b></summary>Parameters list:
+                <ul>
+                    <li> <b>menuState</b>: state handle value
+                    <ul>
+                        <li> <b>true<b> state -> cross icon</li>
+                        <li> <b>false<b> state -> burger icon</li>
+                    </ul>
+                    </li>
+                    <li> <b>size</b>: icon size</li>
+                    <li> <b>{burger, cross}Color</b>: color of the specified icon in-between _{}_ </li>
+                    <li> <b>duration</b>: animation duration</li>
+                    <li> <b>isRounded</b>: rounded line-caps flag</li>
+                </ul>
+            </details>
+        </li>
+        <li> 
+            <details open>
+                <summary><b>Chevron Rotation Icon<b> </summary>Parameters list:
+                <ul>
+                    <li> <b>isSelected</b>: state handle value</li>
+                    <li> <b>size</b>: icon size</li>
+                    <li> <b>duration</b>: animation duration</li>
+                    <li> <b>from</b>: starting rotation of the chevron</li>
+                </ul>
+            </details>
         </li>
     </ul>
 </details>
