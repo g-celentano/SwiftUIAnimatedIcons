@@ -23,7 +23,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State var onScreenState: Bool = false
-    @State var availableIcons = ["MoreVert_Cross", "MoreHor_Cross", "Add_Cross", "Burger_Cross", "Chevron Rotation", "Sun_Moon"]
+    @State var availableIcons = ["MoreVert_Cross", "MoreHor_Cross", "Add_Cross", "Burger_Cross", "Chevron Rotation", "Sun_Moon", "Loading Spinner"]
     @State var selectedIcons = "MoreVert_Cross"
     var body: some View {
         VStack {
@@ -52,8 +52,10 @@ struct ContentView: View {
                 ChevronRotation($onScreenState, from: .right, to: .bottom, lineCaps: .rounded)
                 Text(onScreenState ? "to" : "from")
             case "Sun_Moon":
-                Sun_Moon($onScreenState, size: 200, bouncy: false)
+                Sun_Moon($onScreenState, size: 200)
                 Text(onScreenState ? "isSun" : "isMoon")
+            case "Loading Spinner":
+                LoadingSpinner(loadingAmount: 270, color: .green, rotationSpeed: 1.2)
             default:
                 Text("Select an icon")
             }

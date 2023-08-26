@@ -114,7 +114,7 @@
                 <li> <b>size</b>: icon size</li>
                 <li> <b>color</b>: icon color</li>
                 <li> <b>isRounded</b>: are lineCaps rounded?</li>
-                <li> <b>rotationSpeed</b>: multiplicative constant for animation speed management</li>
+                <li> <b>rotationDuration</b>: time in <b>**seconds**</b> of a single rotation</li>
             </ul>
         </details>
         </li>
