@@ -108,13 +108,33 @@
     <ul>
         <li>
         <details>
-            <summary>LoadingSpinner animation:</summary>Parameters list:
+            <summary>LoadingSpinner:</summary>Parameters list:
             <ul>
                 <li> <b>loadingAmount</b>: spinner "drawed" amount (from 10 to 340, degrees format)</li>
                 <li> <b>size</b>: icon size</li>
                 <li> <b>color</b>: icon color</li>
+                <li> <b>ringBackgroundColor</b>: background color of the ring (<i>if needed</i>)</li>
                 <li> <b>isRounded</b>: are lineCaps rounded?</li>
                 <li> <b>rotationDuration</b>: time in <b>**seconds**</b> of a single rotation</li>
+            </ul>
+        </details>
+        </li>
+        <li>
+        <details>
+            <summary>BouncyLoadingDots:</summary>Parameters list:
+            <ul>
+                <li> <b>size</b>: icon size</li>
+                <li> <b>color</b>: icon color</li>
+                <li> 
+                    <b>dotsShape</b>: shape of the dots, currently supported
+                    <ul>
+                        <li>circle</li>
+                        <li>rectangle</li>
+                        <li>roundedRectangle</li>
+                        <li>trinangle</li>
+                        <li>start</li>
+                    </ul>
+                </li>
             </ul>
         </details>
         </li>
