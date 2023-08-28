@@ -56,7 +56,12 @@ struct ContentView: View {
                 Text(onScreenState ? "isSun" : "isMoon")
             case "Loading Spinner":
                 LoadingSpinner(loadingAmount: 270, color: .green, rotationDuration: 1.2)
-            // case "Bouncy Loading Dots":
+            case "Bouncy Loading Dots":
+                VStack {
+                    BouncyLoadingDots(size: 80, color: .red)
+                    BouncyLoadingDots(dotsShape: .triangle)
+                    BouncyLoadingDots(color: .yellow, dotsShape: .star)
+                }
             default:
                 Text("Select an icon")
             }
