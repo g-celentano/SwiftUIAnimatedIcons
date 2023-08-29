@@ -56,6 +56,7 @@ public struct DisappearingLoadingDots: View {
                 .animation(.linear.repeatForever().delay(0.3), value: opacities[2])
         }
         .frame(width: size, height: size)
+        .foregroundColor(color)
         .onAppear{
             for i in 0..<opacities.count {
                 opacities[i] = 0.2

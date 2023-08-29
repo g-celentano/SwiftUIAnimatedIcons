@@ -66,6 +66,7 @@ public struct MovingLoadingDots: View {
                 .animation(.linear(duration: 0.25).repeatForever(autoreverses: false), value: scale)
         }
         .frame(width: size, height: size)
+        .foregroundColor(color)
         .onAppear {
             movingAmount = size * 0.3
             scale = 0.1

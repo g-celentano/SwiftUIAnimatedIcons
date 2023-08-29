@@ -23,7 +23,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State var onScreenState: Bool = false
-    @State var availableIcons = ["MoreVert_Cross", "MoreHor_Cross", "Add_Cross", "Burger_Cross", "Chevron Rotation", "Sun_Moon", "Loading Spinner", "Bouncy Loading Dots"]
+    @State var availableIcons = ["MoreVert_Cross", "MoreHor_Cross", "Add_Cross", "Burger_Cross", "Chevron Rotation", "Sun_Moon", "Loading Spinner", "Bouncy Loading Dots", "Disappearing Loading Dots", "Moving Loading Dots"]
     @State var selectedIcons = "MoreVert_Cross"
     var body: some View {
         VStack {
@@ -65,6 +65,18 @@ struct ContentView: View {
                     BouncyLoadingDots(size: 80, color: .red)
                     BouncyLoadingDots(dotsShape: .triangle)
                     BouncyLoadingDots(color: .yellow, dotsShape: .star)
+                }
+            case "Disappearing Loading Dots":
+                VStack {
+                    DisappearingLoadingDots(size: 80, color: .red)
+                    DisappearingLoadingDots(dotsShape: .triangle)
+                    DisappearingLoadingDots(color: .yellow, dotsShape: .star)
+                }
+            case "Moving Loading Dots":
+                VStack {
+                    MovingLoadingDots(size: 80, color: .red)
+                    MovingLoadingDots(dotsShape: .triangle)
+                    MovingLoadingDots(color: .yellow, dotsShape: .star)
                 }
             default:
                 Text("Select an icon")
