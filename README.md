@@ -132,7 +132,45 @@
                         <li>rectangle</li>
                         <li>roundedRectangle</li>
                         <li>trinangle</li>
-                        <li>start</li>
+                        <li>star</li>
+                    </ul>
+                </li>
+            </ul>
+        </details>
+        </li>
+        <li>
+        <details>
+            <summary>DisappearingLoadingDots:</summary>Parameters list:
+            <ul>
+                <li> <b>size</b>: icon size</li>
+                <li> <b>color</b>: icon color</li>
+                <li> 
+                    <b>dotsShape</b>: shape of the dots, currently supported
+                    <ul>
+                        <li>circle</li>
+                        <li>rectangle</li>
+                        <li>roundedRectangle</li>
+                        <li>trinangle</li>
+                        <li>star</li>
+                    </ul>
+                </li>
+            </ul>
+        </details>
+        </li>
+        <li>
+        <details>
+            <summary>MovingLoadingDots:</summary>Parameters list:
+            <ul>
+                <li> <b>size</b>: icon size</li>
+                <li> <b>color</b>: icon color</li>
+                <li> 
+                    <b>dotsShape</b>: shape of the dots, currently supported
+                    <ul>
+                        <li>circle</li>
+                        <li>rectangle</li>
+                        <li>roundedRectangle</li>
+                        <li>trinangle</li>
+                        <li>star</li>
                     </ul>
                 </li>
             </ul>

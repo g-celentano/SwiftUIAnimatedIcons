@@ -55,7 +55,11 @@ struct ContentView: View {
                 Sun_Moon($onScreenState, size: 200)
                 Text(onScreenState ? "isSun" : "isMoon")
             case "Loading Spinner":
-                LoadingSpinner(loadingAmount: 270, color: .green, rotationDuration: 1.2)
+                VStack {
+                    LoadingSpinner(loadingAmount: 270, color: .green, rotationDuration: 1.2)
+                    LoadingSpinner()
+                    LoadingSpinner(color: .gray, ringBackgroundColor: .gray.opacity(0.3), rotationDuration: 0.5)
+                }
             case "Bouncy Loading Dots":
                 VStack {
                     BouncyLoadingDots(size: 80, color: .red)
