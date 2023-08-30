@@ -22,7 +22,7 @@ import SwiftUI
 
 @available(iOS 13.0, *)
 @available(macOS 10.15, *)
-public struct GrowingLoadingDots: View {
+public struct GrowingDots: View {
     public init(size: CGFloat = 48.0, color: Color = .black, dotsShape: DotShape = .circle, fromLeftToRight: Bool = true, duration: CGFloat = 0.35) {
         self.size = size
         self.color = color
@@ -73,6 +73,6 @@ public struct GrowingLoadingDots: View {
 @available(macOS 10.15, *)
 struct GrowingLoadingDots_Previews: PreviewProvider {
     static var previews: some View {
-        GrowingLoadingDots(dotsShape: .triangle, fromLeftToRight: false)
+        GrowingDots(dotsShape: .triangle, fromLeftToRight: false)
     }
 }

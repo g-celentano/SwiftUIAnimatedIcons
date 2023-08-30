@@ -22,7 +22,7 @@ import SwiftUI
 
 @available(iOS 13.0, *)
 @available(macOS 10.15, *)
-public struct MovingLoadingDots: View {
+public struct MovingDots: View {
     public init(size: CGFloat = 48, color: Color = .black, dotsShape: DotShape = .circle, animationDuration: CGFloat = 0.2, animationDelay: CGFloat = 0.2) {
         self.size = size
         self.color = color
@@ -84,6 +84,6 @@ public struct MovingLoadingDots: View {
 @available(macOS 10.15, *)
 struct MovingLoadingDots_Previews: PreviewProvider {
     static var previews: some View {
-        MovingLoadingDots(dotsShape: .circle, animationDuration: 0.3, animationDelay: 0.0)
+        MovingDots(dotsShape: .circle, animationDuration: 0.3, animationDelay: 0.0)
     }
 }

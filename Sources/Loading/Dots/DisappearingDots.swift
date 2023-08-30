@@ -20,7 +20,7 @@ import SwiftUI
 
 @available(iOS 13.0, *)
 @available(macOS 10.15, *)
-public struct DisappearingLoadingDots: View {
+public struct DisappearingDots: View {
     public init(size: CGFloat = 48, color: Color = .black, dotsShape: DotShape = .circle) {
         self.size = size
         self.color = color
@@ -69,6 +69,6 @@ public struct DisappearingLoadingDots: View {
 @available(macOS 10.15, *)
 struct DisappearingLoadingDots_Previews: PreviewProvider {
     static var previews: some View {
-        DisappearingLoadingDots()
+        DisappearingDots()
     }
 }

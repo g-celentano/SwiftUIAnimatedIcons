@@ -18,7 +18,7 @@ import SwiftUI
 
 @available(iOS 13.0, *)
 @available(macOS 10.15, *)
-public struct LoadingSpinner: View {
+public struct Spinner: View {
     public init(loadingAmount: CGFloat = 180, size: CGFloat = 24.0, color: Color = .black, ringBackgroundColor: Color = .clear, isRounded: Bool = true, rotationDuration: CGFloat = 1.0) {
         var clippedLoadingAmount: CGFloat = 0
 
@@ -68,6 +68,6 @@ public struct LoadingSpinner: View {
 @available(macOS 10.15, *)
 struct LoadingSinner_Previews: PreviewProvider {
     static var previews: some View {
-        LoadingSpinner(loadingAmount: 270, size: 250, ringBackgroundColor: .gray.opacity(0.3))
+        Spinner(loadingAmount: 270, size: 250, ringBackgroundColor: .gray.opacity(0.3))
     }
 }

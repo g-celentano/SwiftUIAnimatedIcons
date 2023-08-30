@@ -20,7 +20,7 @@ import SwiftUI
 
 @available(iOS 13.0, *)
 @available(macOS 10.15, *)
-public struct BouncyLoadingDots: View {
+public struct BouncyDots: View {
     public init(size: CGFloat = 48.0, color: Color = .black, dotsShape: DotShape = .circle) {
         self.size = size
         self.color = color
@@ -72,6 +72,6 @@ public struct BouncyLoadingDots: View {
 @available(macOS 10.15, *)
 struct BouncyLoadingDots_Previews: PreviewProvider {
     static var previews: some View {
-        BouncyLoadingDots(dotsShape: .star)
+        BouncyDots(dotsShape: .star)
     }
 }

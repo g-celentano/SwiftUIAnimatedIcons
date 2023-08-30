@@ -22,7 +22,7 @@ import SwiftUI
 
 @available(iOS 13.0, *)
 @available(iOS 10.15, *)
-public struct RotatingLoadingDots: View {
+public struct RotatingDots: View {
     public init(size: CGFloat = 48.0, color: Color = .black, dotsShape: DotShape = .circle, animationDuration: CGFloat = 0.35, animationDelay: CGFloat = 0.15) {
         self.size = size
         self.color = color
@@ -71,6 +71,6 @@ public struct RotatingLoadingDots: View {
 @available(iOS 10.15, *)
 struct RotatingLoadingDots_Previews: PreviewProvider {
     static var previews: some View {
-        RotatingLoadingDots(animationDelay: 0)
+        RotatingDots(animationDelay: 0)
     }
 }
