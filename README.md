@@ -1,6 +1,6 @@
 # AnimatedIcons
 
-<b>Swift Package</b> for using animated icons inside projects without the """stress""" of having to handle the state of every _animated icon_.
+<b>Swift(UI) Package</b> for using animated icons inside projects without the """stress""" of having to handle the state of every _animated icon_.
 
 ## Currently supported:
 
