@@ -56,35 +56,41 @@ struct ContentView: View {
                 Text(onScreenState ? "isSun" : "isMoon")
             case "Loading Spinner":
                 VStack {
-                    LoadingSpinner(loadingAmount: 270, color: .green, rotationDuration: 1.2)
-                    LoadingSpinner()
-                    LoadingSpinner(color: .gray, ringBackgroundColor: .gray.opacity(0.3), rotationDuration: 0.5)
+                    Spinner(loadingAmount: 270, color: .green, rotationDuration: 1.2)
+                    Spinner()
+                    Spinner(color: .gray, ringBackgroundColor: .gray.opacity(0.3), rotationDuration: 0.5)
                 }
             case "Loading Dots":
                 ScrollView {
                     LazyVGrid(columns: [GridItem(), GridItem()]) {
                         VStack {
-                            BouncyLoadingDots(size: 80, color: .red)
-                            BouncyLoadingDots(dotsShape: .triangle)
-                            BouncyLoadingDots(color: .yellow, dotsShape: .star)
+                            BouncyDots(size: 80, color: .red)
+                            BouncyDots(dotsShape: .triangle)
+                            BouncyDots(color: .yellow, dotsShape: .star)
                             Text("Bouncy Loading Dots")
                         }
                         VStack {
-                            DisappearingLoadingDots(size: 80, color: .red)
-                            DisappearingLoadingDots(dotsShape: .triangle)
-                            DisappearingLoadingDots(color: .yellow, dotsShape: .star)
+                            DisappearingDots(size: 80, color: .red)
+                            DisappearingDots(dotsShape: .triangle)
+                            DisappearingDots(color: .yellow, dotsShape: .star)
                             Text("Disappearing Loading Dots")
                         }
                         VStack {
-                            MovingLoadingDots(size: 80, color: .red)
-                            MovingLoadingDots(dotsShape: .triangle)
-                            MovingLoadingDots(color: .yellow, dotsShape: .star)
+                            MovingDots(size: 80, color: .red, animationDuration: 1.0, animationDelay: 0.0)
+                            MovingDots(dotsShape: .triangle, animationDelay: 0.5)
+                            MovingDots(color: .yellow, dotsShape: .star)
                             Text("Moving Loading Dots")
                         }
                         VStack {
-                            RotatingLoadingDots(size: 80, color: .red)
-                            RotatingLoadingDots(dotsShape: .triangle)
-                            RotatingLoadingDots(color: .yellow, dotsShape: .star)
+                            RotatingDots(size: 80, color: .red, animationDuration: 0.2, animationDelay: 1.0)
+                            RotatingDots(dotsShape: .triangle)
+                            RotatingDots(color: .yellow, dotsShape: .star, animationDuration: 2.0)
+                            Text("Rotating Loading Dots")
+                        }
+                        VStack {
+                            GrowingDots(size: 80, color: .red, duration: 2.0)
+                            GrowingDots(dotsShape: .triangle, fromLeftToRight: false)
+                            GrowingDots(color: .yellow, dotsShape: .star)
                             Text("Rotating Loading Dots")
                         }
                     }
