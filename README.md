@@ -173,6 +173,8 @@
                         <li>star</li>
                     </ul>
                 </li>
+                <li> <b>animationDuration</b>: duration in **seconds** of a single animation iteration </li>
+                <li> <b>animationDelay</b>: delay in **seconds** between animation completions</li>
             </ul>
         </details>
         </li>
