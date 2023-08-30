@@ -199,5 +199,26 @@
             </ul>
         </details>
         </li>
+        <li>
+        <details>
+            <summary>GrowingLoadingDots:</summary>Parameters list:
+            <ul>
+                <li> <b>size</b>: icon size</li>
+                <li> <b>color</b>: icon color</li>
+                <li> 
+                    <b>dotsShape</b>: shape of the dots, currently supported
+                    <ul>
+                        <li>circle</li>
+                        <li>rectangle</li>
+                        <li>roundedRectangle</li>
+                        <li>trinangle</li>
+                        <li>star</li>
+                    </ul>
+                </li>
+                <li> <b>fromLeftToRight</b>: if the animation goes from left to right, or just outside dots in sync and then inside</li>
+                <li> <b>duration</b>: duration in **seconds** of a single animation iteration </li>
+            </ul>
+        </details>
+        </li>
     </ul>
 </details>
