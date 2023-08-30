@@ -108,7 +108,7 @@
     <ul>
         <li>
         <details>
-            <summary>LoadingSpinner:</summary>Parameters list:
+            <summary>Spinner:</summary>Parameters list:
             <ul>
                 <li> <b>loadingAmount</b>: spinner "drawed" amount (from 10 to 340, degrees format)</li>
                 <li> <b>size</b>: icon size</li>
@@ -121,7 +121,7 @@
         </li>
         <li>
         <details>
-            <summary>BouncyLoadingDots:</summary>Parameters list:
+            <summary>BouncyDots:</summary>Parameters list:
             <ul>
                 <li> <b>size</b>: icon size</li>
                 <li> <b>color</b>: icon color</li>
@@ -140,7 +140,7 @@
         </li>
         <li>
         <details>
-            <summary>DisappearingLoadingDots:</summary>Parameters list:
+            <summary>DisappearingDots:</summary>Parameters list:
             <ul>
                 <li> <b>size</b>: icon size</li>
                 <li> <b>color</b>: icon color</li>
@@ -159,28 +159,7 @@
         </li>
         <li>
         <details>
-            <summary>MovingLoadingDots:</summary>Parameters list:
-            <ul>
-                <li> <b>size</b>: icon size</li>
-                <li> <b>color</b>: icon color</li>
-                <li> 
-                    <b>dotsShape</b>: shape of the dots, currently supported
-                    <ul>
-                        <li>circle</li>
-                        <li>rectangle</li>
-                        <li>roundedRectangle</li>
-                        <li>trinangle</li>
-                        <li>star</li>
-                    </ul>
-                </li>
-                <li> <b>animationDuration</b>: duration in **seconds** of a single animation iteration </li>
-                <li> <b>animationDelay</b>: delay in **seconds** between animation completions</li>
-            </ul>
-        </details>
-        </li>
-        <li>
-        <details>
-            <summary>RotatingLoadingDots:</summary>Parameters list:
+            <summary>MovingDots:</summary>Parameters list:
             <ul>
                 <li> <b>size</b>: icon size</li>
                 <li> <b>color</b>: icon color</li>
@@ -201,7 +180,28 @@
         </li>
         <li>
         <details>
-            <summary>GrowingLoadingDots:</summary>Parameters list:
+            <summary>RotatingDots:</summary>Parameters list:
+            <ul>
+                <li> <b>size</b>: icon size</li>
+                <li> <b>color</b>: icon color</li>
+                <li> 
+                    <b>dotsShape</b>: shape of the dots, currently supported
+                    <ul>
+                        <li>circle</li>
+                        <li>rectangle</li>
+                        <li>roundedRectangle</li>
+                        <li>trinangle</li>
+                        <li>star</li>
+                    </ul>
+                </li>
+                <li> <b>animationDuration</b>: duration in **seconds** of a single animation iteration </li>
+                <li> <b>animationDelay</b>: delay in **seconds** between animation completions</li>
+            </ul>
+        </details>
+        </li>
+        <li>
+        <details>
+            <summary>GrowingDots:</summary>Parameters list:
             <ul>
                 <li> <b>size</b>: icon size</li>
                 <li> <b>color</b>: icon color</li>
