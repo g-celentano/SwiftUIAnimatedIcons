@@ -23,7 +23,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State var onScreenState: Bool = false
-    @State var availableIcons = ["MoreVert_Cross", "MoreHor_Cross", "Add_Cross", "Burger_Cross", "Chevron Rotation", "Sun_Moon", "Loading Spinner", "Bouncy Loading Dots", "Disappearing Loading Dots", "Moving Loading Dots"]
+    @State var availableIcons = ["MoreVert_Cross", "MoreHor_Cross", "Add_Cross", "Burger_Cross", "Chevron Rotation", "Sun_Moon", "Loading Spinner", "Loading Dots"]
     @State var selectedIcons = "MoreVert_Cross"
     var body: some View {
         VStack {
@@ -60,24 +60,36 @@ struct ContentView: View {
                     LoadingSpinner()
                     LoadingSpinner(color: .gray, ringBackgroundColor: .gray.opacity(0.3), rotationDuration: 0.5)
                 }
-            case "Bouncy Loading Dots":
-                VStack {
-                    BouncyLoadingDots(size: 80, color: .red)
-                    BouncyLoadingDots(dotsShape: .triangle)
-                    BouncyLoadingDots(color: .yellow, dotsShape: .star)
+            case "Loading Dots":
+                ScrollView {
+                    LazyVGrid(columns: [GridItem(), GridItem()]) {
+                        VStack {
+                            BouncyLoadingDots(size: 80, color: .red)
+                            BouncyLoadingDots(dotsShape: .triangle)
+                            BouncyLoadingDots(color: .yellow, dotsShape: .star)
+                            Text("Bouncy Loading Dots")
+                        }
+                        VStack {
+                            DisappearingLoadingDots(size: 80, color: .red)
+                            DisappearingLoadingDots(dotsShape: .triangle)
+                            DisappearingLoadingDots(color: .yellow, dotsShape: .star)
+                            Text("Disappearing Loading Dots")
+                        }
+                        VStack {
+                            MovingLoadingDots(size: 80, color: .red)
+                            MovingLoadingDots(dotsShape: .triangle)
+                            MovingLoadingDots(color: .yellow, dotsShape: .star)
+                            Text("Moving Loading Dots")
+                        }
+                        VStack {
+                            RotatingLoadingDots(size: 80, color: .red)
+                            RotatingLoadingDots(dotsShape: .triangle)
+                            RotatingLoadingDots(color: .yellow, dotsShape: .star)
+                            Text("Rotating Loading Dots")
+                        }
+                    }
                 }
-            case "Disappearing Loading Dots":
-                VStack {
-                    DisappearingLoadingDots(size: 80, color: .red)
-                    DisappearingLoadingDots(dotsShape: .triangle)
-                    DisappearingLoadingDots(color: .yellow, dotsShape: .star)
-                }
-            case "Moving Loading Dots":
-                VStack {
-                    MovingLoadingDots(size: 80, color: .red)
-                    MovingLoadingDots(dotsShape: .triangle)
-                    MovingLoadingDots(color: .yellow, dotsShape: .star)
-                }
+
             default:
                 Text("Select an icon")
             }
