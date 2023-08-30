@@ -61,6 +61,7 @@ public struct GrowingDots: View {
                 .offset(x: size * 0.3, y: 0)
         }
         .frame(width: size, height: size)
+        .foregroundColor(color)
         .onAppear {
             for i in 0 ..< animatedScales.count {
                 animatedScales[i] = 0.0
