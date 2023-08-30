@@ -84,6 +84,6 @@ public struct MovingLoadingDots: View {
 @available(macOS 10.15, *)
 struct MovingLoadingDots_Previews: PreviewProvider {
     static var previews: some View {
-        MovingLoadingDots(dotsShape: .circle, animationDuration: 1.2, animationDelay: 0.1)
+        MovingLoadingDots(dotsShape: .circle, animationDuration: 0.3, animationDelay: 0.0)
     }
 }
