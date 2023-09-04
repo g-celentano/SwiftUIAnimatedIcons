@@ -23,7 +23,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State var onScreenState: Bool = false
-    @State var availableIcons = ["MoreVert_Cross", "MoreHor_Cross", "Add_Cross", "Burger_Cross", "Chevron Rotation", "Sun_Moon", "Loading Spinner", "Loading Dots"]
+    @State var availableIcons = ["MoreVert_Cross", "MoreHor_Cross", "Add_Cross", "Burger_Cross", "Chevron Rotation", "Sun_Moon", "Loading Spinner", "Loading Dots", "Loading Rects"]
     @State var selectedIcons = "MoreVert_Cross"
     var body: some View {
         VStack {
@@ -91,6 +91,35 @@ struct ContentView: View {
                             GrowingDots(size: 80, color: .red, duration: 2.0)
                             GrowingDots(dotsShape: .triangle, fromLeftToRight: false)
                             GrowingDots(color: .yellow, dotsShape: .star)
+                            Text("Rotating Loading Dots")
+                        }
+                    }
+                }
+            case "Loading Rects":
+                ScrollView {
+                    LazyVGrid(columns: [GridItem(), GridItem()]) {
+                        VStack {
+                            MovingSquares(size: 80, color: .red)
+                            MovingSquares(cornerRadius: 0.75, duration: 0.5)
+                            MovingSquares(color: .yellow, squareNumbers: .Three)
+                            Text("Moving Loading Squares")
+                        }
+                        VStack {
+                            PulsingSquares(size: 80, color: .red)
+                            PulsingSquares(cornerRadius: 0.75, duration: 0.5)
+                            PulsingSquares(color: .yellow, delay: 0.25)
+                            Text("Pulsing Loading Squares")
+                        }
+                        VStack {
+                            GrowingRects(size: 100, duration: 1.5, delay: 0.0)
+                            GrowingRects(delay: 0.5)
+                            GrowingRects(size: 150, delay: 1.25)
+                            Text("Growing Loading Rects")
+                        }
+                        VStack {
+                            DisappearingRects(color: .red, duration: 1.5)
+                            DisappearingRects(size: 150, delay: 0.25)
+                            DisappearingRects()
                             Text("Rotating Loading Dots")
                         }
                     }
