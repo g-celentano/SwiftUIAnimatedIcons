@@ -254,5 +254,17 @@
             </ul>
         </details>
         </li>
+        <li>
+        <details>
+            <summary>MovingSquares:</summary>Parameters list:
+            <ul>
+                <li> <b>cornerRadius</b>: percentage amount of the corner radius of a single square, **(0 -> square, >0.5 -> circle)**</li>
+                <li> <b>size</b>: icon size</li>
+                <li> <b>color</b>: icon color</li>
+                <li> <b>duration</b>: single movement duration, in **seconds**</li>
+                <li> <b>squareNumbers</b>: numbers of the squares present in the icon (**cases**: Two, Three)</li>
+            </ul>
+        </details>
+        </li>
     </ul>
 </details>

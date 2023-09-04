@@ -12,6 +12,15 @@ public enum SquareNumber: Int {
     case Three = 3
 }
 
+
+/// MovingSquares
+/// Parameters list:
+/// - **cornerRadius**: percentage amount of the corner radius of a single square, **(0 -> square, >0.5 -> circle)**
+/// - **size**: icon size
+/// - **color**: icon color
+/// - **duration**: single movement duration
+/// - **squareNumbers**: numbers of the squares present in the icon (**cases**: Two, Three)
+
 @available(iOS 13.0, *)
 @available(macOS 10.15, *)
 public struct MovingSquares: View {
