@@ -220,5 +220,39 @@
             </ul>
         </details>
         </li>
+        <li>
+        <details>
+            <summary>DisappearingRects:</summary>Parameters list:
+            <ul>
+                <li> <b>size</b>: icon size</li>
+                <li> <b>color</b>: icon color</li>
+                <li> <b>duration</b>: opacity transition duration in **seconds** </li>
+                <li> <b>delay</b>: delay between two cycles of an opacity transition </li>
+            </ul>
+        </details>
+        </li>
+        <li>
+        <details>
+            <summary>GrowingRects:</summary>Parameters list:
+            <ul>
+                <li> <b>size</b>: icon size</li>
+                <li> <b>color</b>: icon color</li>
+                <li> <b>duration</b>: growing animation duration, in **seconds**</li>
+                <li> <b>delay</b>: delay between growing animations, in **seconds**</li>
+            </ul>
+        </details>
+        </li>
+        <li>
+        <details>
+            <summary>PulsingSquares:</summary>Parameters list:
+            <ul>
+                <li> <b>cornerRadius</b>: percentage amount to apply for making the squares with rounded corners **(0.0 -> square; >0.5 -> circle)**</li>
+                <li> <b>size</b>: icon size</li>
+                <li> <b>color</b>: icon color</li>
+                <li> <b>duration</b>: animation duration, in **seconds**</li>
+                <li> <b>delay</b>: delay between the completion of the animations, in **seconds**</li>
+            </ul>
+        </details>
+        </li>
     </ul>
 </details>
