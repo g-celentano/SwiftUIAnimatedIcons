@@ -55,10 +55,23 @@ struct ContentView: View {
                 Sun_Moon($onScreenState, size: 200)
                 Text(onScreenState ? "isSun" : "isMoon")
             case "Loading Spinner":
-                VStack {
-                    Spinner(loadingAmount: 270, color: .green, rotationDuration: 1.2)
-                    Spinner()
-                    Spinner(color: .gray, ringBackgroundColor: .gray.opacity(0.3), rotationDuration: 0.5)
+                ScrollView {
+                    LazyVGrid(columns: [GridItem(), GridItem()]) {
+                        VStack {
+                            Spinner(loadingAmount: 270, color: .green, rotationDuration: 1.2)
+                            Spinner()
+                            Spinner(color: .gray, ringBackgroundColor: .gray.opacity(0.3), rotationDuration: 0.5)
+
+                            Text("Loading Spinner")
+                        }
+                        VStack {
+                            GrowingDotsSpinner(size: 50, color: .red)
+                            GrowingDotsSpinner(minDotScale: 0.1, maxDotScale: 1.5, dotDistance: 60)
+                            GrowingDotsSpinner(dotDistance: 20)
+
+                            Text("Growing Dots Loading Spinner")
+                        }
+                    }
                 }
             case "Loading Dots":
                 ScrollView {

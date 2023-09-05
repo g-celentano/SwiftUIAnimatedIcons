@@ -19,7 +19,7 @@ import SwiftUI
 @available(iOS 13.0, *)
 @available(macOS 10.15, *)
 public struct Spinner: View {
-    public init(loadingAmount: CGFloat = 180, size: CGFloat = 24.0, color: Color = .black, ringBackgroundColor: Color = .clear, isRounded: Bool = true, rotationDuration: CGFloat = 1.0) {
+    public init(loadingAmount: CGFloat = 180, size: CGFloat = 48.0, color: Color = .black, ringBackgroundColor: Color = .clear, isRounded: Bool = true, rotationDuration: CGFloat = 1.0) {
         var clippedLoadingAmount: CGFloat = 0
 
         if loadingAmount < 10 {
