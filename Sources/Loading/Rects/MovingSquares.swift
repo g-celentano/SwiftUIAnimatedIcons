@@ -88,11 +88,11 @@ public struct MovingSquares: View {
                 offsets[0] = (CGSize(width: size * 0.5, height: -size * 0.25))
                 offsets[1] = (CGSize(width: 0, height: -size * 0.25))
                 offsets[2] = (CGSize(width: 0, height: size * 0.25))
-                DispatchQueue.main.asyncAfter(deadline: .now() + duration * 2) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + duration * 2.1) {
                     offsets[0] = (CGSize(width: size * 0.5, height: size * 0.25))
                     offsets[1] = (CGSize(width: size * 0.5, height: -size * 0.25))
                     offsets[2] = (CGSize(width: 0, height: -size * 0.25))
-                    DispatchQueue.main.asyncAfter(deadline: .now() + duration * 2.1) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + duration * 2.2) {
                         offsets[0] = (CGSize(width: 0, height: size * 0.25))
                         offsets[1] = (CGSize(width: size * 0.5, height: size * 0.25))
                         offsets[2] = (CGSize(width: size * 0.5, height: -size * 0.25))
@@ -109,6 +109,6 @@ public struct MovingSquares: View {
 @available(macOS 10.15, *)
 struct MovingSquares_Previews: PreviewProvider {
     static var previews: some View {
-        MovingSquares()
+        MovingSquares(squareNumbers: .Three)
     }
 }

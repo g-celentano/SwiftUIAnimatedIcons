@@ -121,6 +121,19 @@
         </li>
         <li>
         <details>
+            <summary>GrowingDotsSpinner:</summary>Parameters list:
+            <ul>
+                <li> <b>size</b>: icon size</li>
+                <li> <b>color</b>: icon color</li>
+                <li> <b>minDotScale</b>: minimum scale value for the dot scaling animation</li>
+                <li> <b>maxDotScale</b>: maximum scale value for the dot scaling animation</li>
+                <li> <b>rotationSpeed</b>: rotation speed value to adjuste icon rotation speed</li>
+                <li> <b>dotDistance</b>: value in <b>**degrees**</b> that indicates the distance between dots on the perimeter of the circle of radius <i>size / 2</i></li>
+            </ul>
+        </details>
+        </li>
+        <li>
+        <details>
             <summary>BouncyDots:</summary>Parameters list:
             <ul>
                 <li> <b>size</b>: icon size</li>
