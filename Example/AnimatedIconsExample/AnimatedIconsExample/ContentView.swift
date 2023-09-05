@@ -71,6 +71,20 @@ struct ContentView: View {
 
                             Text("Growing Dots Loading Spinner")
                         }
+                        VStack {
+                            GrowingSpinner(size: 100)
+                            GrowingSpinner(spinnerColor: .red, spinnerBgColor: .blue)
+                            GrowingSpinner(rotationDuration: 1.2)
+
+                            Text("Growing Loading Spinner")
+                        }
+                        VStack {
+                            DisappearingDotsSpinner(size: 100)
+                            DisappearingDotsSpinner(color: .yellow)
+                            DisappearingDotsSpinner(dotsDistance: 45)
+
+                            Text("Growing Dots Loading Spinner")
+                        }
                     }
                 }
             case "Loading Dots":
