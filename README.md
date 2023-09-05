@@ -134,6 +134,27 @@
         </li>
         <li>
         <details>
+            <summary>GrowingSpinner:</summary>Parameters list:
+            <ul>
+                <li> <b>size</b>: icon size</li>
+                <li> <b>spinnerColor</b>: spinner ring color</li>
+                <li> <b>spinnerBgColor</b>: spinner background ring color</li>
+                <li> <b>rotationDuration</b>: duration time of a single rotation, in <b>**seconds**<b/></li>
+            </ul>
+        </details>
+        </li>
+        <li>
+        <details>
+            <summary>DisappearingDotsSpinner:</summary>Parameters list:
+            <ul>
+                <li> <b>size</b>: icon size</li>
+                <li> <b>color</b>: icon color</li>
+                <li> <b>dotsDistance</b>: value in <b>**degrees**</b> that indicates the distance between dots on the perimeter of the circle of radius <i>size / 2</i></li>
+            </ul>
+        </details>
+        </li>
+        <li>
+        <details>
             <summary>BouncyDots:</summary>Parameters list:
             <ul>
                 <li> <b>size</b>: icon size</li>
