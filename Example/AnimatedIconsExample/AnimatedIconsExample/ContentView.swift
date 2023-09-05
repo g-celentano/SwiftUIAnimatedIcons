@@ -8,19 +8,6 @@
 import AnimatedIcons
 import SwiftUI
 
-/**
- MoreVert_Cross(isSelected: $isSelectedVertical, duration: 0.75)
- Text(isSelectedVertical ? "cross" : "more vertical")
- MoreHor_Cross(isSelected: $isSelectedHorizontal, size: 150)
- Text(isSelectedHorizontal ? "cross" : "more horizontal")
- Add_Cross(isSelected: $isSelectedAdd, size: 80, plusColor: .red, crossColor: .blue)
- Text(isSelectedAdd ? "cross" : "plus")
- BurgerMenu_Cross(menuState: $isMenuOpen, isRounded: true)
- Text(isMenuOpen ? "cross" : "burger menu")
- ChevronRotation(isSelected: $isChevronSelected, from: .right, to: .bottom, lineCaps: .pointy)
- Text(isChevronSelected ? "to" : "from")
- */
-
 struct ContentView: View {
     @State var onScreenState: Bool = false
     @State var availableIcons = ["MoreVert_Cross", "MoreHor_Cross", "Add_Cross", "Burger_Cross", "Chevron Rotation", "Sun_Moon", "Loading Spinner", "Loading Dots", "Loading Rects"]

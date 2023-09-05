@@ -11,12 +11,12 @@ import SwiftUI
 /// MoreVert-Cross Animated Icon
 /// From vetically arranged more dots to cross icon
 /// Parameters list:
-///     - **isSelected**: state handle value
-///         - **true** state -> cross icon
-///         - **false** state -> horizontal more dots icon
-///     - **size**: icon size
-///     - **duration**: animation duration
-///     - **{dots, cross}color**: color for each category in-between _{}_
+/// - **isSelected**: state handle value
+///  - **true** state -> cross icon
+///  - **false** state -> horizontal more dots icon
+/// - **size**: icon size
+/// - **duration**: animation duration
+/// - **{dots, cross}color**: color for each category in-between _{}_
 @available(iOS 13.0, *)
 @available(macOS 10.15, *)
 public struct MoreVert_Cross: View {
