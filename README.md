@@ -109,6 +109,7 @@
                 <li> <b>size</b>: icon size</li>
                 <li> <b>onColor</b>: color for **isSelected = _true_**</li>
                 <li> <b>offColor</b>:color for **isSelected = _false_**</li>
+                <li> <b>duration</b>: animation duration</li>
             </ul>
         </details>
         </li>
