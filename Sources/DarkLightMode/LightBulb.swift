@@ -54,9 +54,9 @@ public struct LightBulb: View {
 
                 ZStack {
                     Circle()
-                        .frame(width: circleOn ? 0.0 : size * 0.675)
+                        .frame(width: circleOn ? size * 0.675 : 0.0)
                     RoundedRectangle(cornerRadius: size * 0.04)
-                        .frame(width: rectangleOn ? 0.0 : size * 0.4, height: rectangleOn ? 0.0 : size * 0.15)
+                        .frame(width: rectangleOn ? size * 0.4 : 0.0, height: rectangleOn ? size * 0.15 : 0.0)
                         .offset(x: 0, y: size * 0.315)
                 }
                 .frame(alignment: .bottom)
