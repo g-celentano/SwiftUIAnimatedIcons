@@ -7,6 +7,14 @@
 
 import SwiftUI
 
+
+/// LightBulb
+/// Parameters list:
+/// - **isSelected**: state handle value
+/// - **size**: icon size
+/// - **onColor**: color for **isSelected = _true_**
+/// - **offColor**: color for **isSelected = _false_**
+
 @available(iOS 13.0, *)
 @available(macOS 10.15, *)
 public struct LightBulb: View {
@@ -64,6 +72,6 @@ public struct LightBulb: View {
 @available(macOS 10.15, *)
 struct LightBulb_Previews: PreviewProvider {
     static var previews: some View {
-        LightBulb(isSelected: .constant(false), size: 300)
+        LightBulb(.constant(false), size: 300)
     }
 }
