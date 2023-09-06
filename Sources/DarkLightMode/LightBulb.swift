@@ -55,11 +55,13 @@ public struct LightBulb: View {
                 ZStack {
                     Circle()
                         .frame(width: size * 0.675, height: circleOn ? size * 0.675 : 0.0)
-                    RoundedRectangle(cornerRadius: size * 0.04)
-                        .frame(width: size * 0.4 , height: rectangleOn ? size * 0.15 : 0.0)
-                        .offset(x: 0, y: size * 0.315)
+                    VStack {
+                        RoundedRectangle(cornerRadius: size * 0.04)
+                            .frame(width: size * 0.4, height: rectangleOn ? size * 0.15 : 0.0)
+                            .offset(x: 0, y: size * 0.315)
+                    }
+                    .frame(alignment: .bottom)
                 }
-                .frame(alignment: .bottom)
                 .blendMode(.destinationOut)
             }
             .compositingGroup()
