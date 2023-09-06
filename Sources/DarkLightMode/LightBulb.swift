@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 /// LightBulb
 /// Parameters list:
 /// - **isSelected**: state handle value
@@ -24,12 +23,23 @@ public struct LightBulb: View {
         self.size = size
         self.onColor = onColor
         self.offColor = offColor
+
+        if isSelected.wrappedValue {
+            self.circleOn = true
+            self.rectangleOn = true
+        } else {
+            self.circleOn = false
+            self.rectangleOn = false
+        }
     }
 
     @Binding private var isSelected: Bool
     @State private var size: CGFloat
     @State private var onColor: Color
     @State private var offColor: Color
+
+    @State private var circleOn: Bool
+    @State private var rectangleOn: Bool
 
     public var body: some View {
         VStack {
@@ -44,9 +54,9 @@ public struct LightBulb: View {
 
                 ZStack {
                     Circle()
-                        .frame(width: isSelected ? 0.0 : size * 0.675)
+                        .frame(width: circleOn ? 0.0 : size * 0.675)
                     RoundedRectangle(cornerRadius: size * 0.04)
-                        .frame(width: isSelected ? 0.0 : size * 0.4, height: isSelected ? 0.0 : size * 0.15)
+                        .frame(width: rectangleOn ? 0.0 : size * 0.4, height: rectangleOn ? 0.0 : size * 0.15)
                         .offset(x: 0, y: size * 0.315)
                 }
                 .blendMode(.destinationOut)
@@ -62,7 +72,27 @@ public struct LightBulb: View {
         .foregroundColor(isSelected ? onColor : offColor)
         .onTapGesture {
             withAnimation {
-                isSelected.toggle()
+                if isSelected {
+                    isSelected = false
+                    withAnimation(.linear(duration: 0.1)) {
+                        circleOn = false
+                    }
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                        withAnimation {
+                            rectangleOn = false
+                        }
+                    }
+                } else {
+                    isSelected = true
+                    withAnimation(.linear(duration: 0.1)) {
+                        rectangleOn = true
+                    }
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                        withAnimation {
+                            circleOn = true
+                        }
+                    }
+                }
             }
         }
     }
