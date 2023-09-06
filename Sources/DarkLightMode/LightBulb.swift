@@ -59,6 +59,7 @@ public struct LightBulb: View {
                         .frame(width: rectangleOn ? 0.0 : size * 0.4, height: rectangleOn ? 0.0 : size * 0.15)
                         .offset(x: 0, y: size * 0.315)
                 }
+                .frame(alignment: .bottom)
                 .blendMode(.destinationOut)
             }
             .compositingGroup()
@@ -68,7 +69,7 @@ public struct LightBulb: View {
             RoundedRectangle(cornerRadius: size * 0.04)
                 .frame(width: size * 0.5, height: size * 0.1)
         }
-        .frame(width: size, height: size, alignment: .bottom)
+        .frame(width: size, height: size)
         .foregroundColor(isSelected ? onColor : offColor)
         .onTapGesture {
             withAnimation {
