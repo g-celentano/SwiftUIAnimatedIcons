@@ -55,14 +55,17 @@ public struct LightBulb: View {
                 }
 
                 ZStack {
-                    Circle()
-                        .frame(width: size * 0.675, height: circleOn ? size * 0.675 : 0.0)
-                    VStack{
+                    VStack {
+                        Circle()
+                            .frame(width: size * 0.675, height: circleOn ? size * 0.675 : 0.0)
+                    }
+                    .frame(width: size * 0.675, height: size * 0.675, alignment: .bottom)
+                    VStack {
                         RoundedRectangle(cornerRadius: size * 0.04)
                             .frame(width: size * 0.4, height: rectangleOn ? size * 0.15 : 0.0)
                             .offset(x: 0, y: size * 0.315)
                     }
-                    .frame(width: size * 0.4, height:size * 0.15, alignment: .bottom)
+                    .frame(width: size * 0.4, height: size * 0.15, alignment: .bottom)
                 }
                 .blendMode(.destinationOut)
             }
