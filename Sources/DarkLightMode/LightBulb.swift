@@ -44,19 +44,19 @@ public struct LightBulb: View {
 
                 ZStack {
                     Circle()
-                        .frame(width: size * 0.675)
+                        .frame(width: isSelected ? 0.0 : size * 0.675)
                     RoundedRectangle(cornerRadius: size * 0.04)
-                        .frame(width: size * 0.4, height: size * 0.15)
+                        .frame(width: isSelected ? 0.0 : size * 0.4, height: isSelected ? 0.0 : size * 0.15)
                         .offset(x: 0, y: size * 0.315)
                 }
-                .blendMode(isSelected ? .destinationOver : .destinationOut)
+                .blendMode(.destinationOut)
             }
             .compositingGroup()
             RoundedRectangle(cornerRadius: size * 0.04)
                 .frame(width: size * 0.5, height: size * 0.05)
                 .foregroundColor(.clear)
             RoundedRectangle(cornerRadius: size * 0.04)
-                .frame(width: size * 0.5, height: size * 0.12)
+                .frame(width: size * 0.5, height: size * 0.1)
         }
         .frame(width: size, height: size)
         .foregroundColor(isSelected ? onColor : offColor)
@@ -72,6 +72,6 @@ public struct LightBulb: View {
 @available(macOS 10.15, *)
 struct LightBulb_Previews: PreviewProvider {
     static var previews: some View {
-        LightBulb(.constant(false), size: 300)
+        LightBulb(.constant(true), size: 300)
     }
 }
