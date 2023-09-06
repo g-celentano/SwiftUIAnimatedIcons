@@ -73,7 +73,7 @@
             </details>
         </li>
         <li> 
-            <details  >
+            <details>
                 <summary>Chevron Rotation Icon</summary>Parameters list:
                 <ul>
                     <li> <b>isSelected</b>: state handle value</li>
