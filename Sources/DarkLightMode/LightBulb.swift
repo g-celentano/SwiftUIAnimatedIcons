@@ -68,7 +68,7 @@ public struct LightBulb: View {
             RoundedRectangle(cornerRadius: size * 0.04)
                 .frame(width: size * 0.5, height: size * 0.1)
         }
-        .frame(width: size, height: size)
+        .frame(width: size, height: size, alignment: .bottom)
         .foregroundColor(isSelected ? onColor : offColor)
         .onTapGesture {
             withAnimation {

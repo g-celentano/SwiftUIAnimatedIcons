@@ -101,6 +101,17 @@
             </ul>
         </details>
         </li>
+        <li>
+        <details>
+            <summary>LightBulb icon</summary>Parameters list:
+            <ul>
+                <li> <b>isSelected</b>: state handle value</li>
+                <li> <b>size</b>: icon size</li>
+                <li> <b>onColor</b>: color for **isSelected = _true_**</li>
+                <li> <b>offColor</b>:color for **isSelected = _false_**</li>
+            </ul>
+        </details>
+        </li>
     </ul>
 </details>
 <details>
