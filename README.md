@@ -109,6 +109,7 @@
         <li>
         <details>
         <summary> Spinners </summary>
+        <!--- SPINNERS BEGIN  -->
             <ul>
                 <li>
                 <details>
@@ -159,11 +160,12 @@
                 </li>
             </ul>
         </details>
+        <!--- SPINNERS END -->
         </li>
-        
         <li>
         <details>
         <summary> Dots </summary>
+        <!--- DOTS START -->
             <ul>
                 <li>
                 <details>
@@ -188,7 +190,7 @@
                 <details>
                     <summary>DisappearingDots:</summary>Parameters list:
                     <ul>
-                        <li> <b>size</b>: icon size</li>
+                        <li> <b>size</b>: icon size </li>
                         <li> <b>color</b>: icon color</li>
                         <li> 
                             <b>dotsShape</b>: shape of the dots, currently supported
@@ -267,12 +269,13 @@
                 </details>
                 </li>
             </ul>
+        <!--- DOTS END -->
         </details>
         </li>
-        
         <li>
         <details>
         <summary> Rects </summary>
+        <!--- RECTS START -->
             <ul>
                 <li>
                 <details>
@@ -321,9 +324,8 @@
                 </details>
                 </li>
             </ul>
+        <!--- RECTS END -->
         </details>
         </li>
-        
-        
     </ul>
 </details>
