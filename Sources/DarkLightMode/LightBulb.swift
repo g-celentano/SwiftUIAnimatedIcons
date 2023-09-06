@@ -17,12 +17,13 @@ import SwiftUI
 @available(iOS 13.0, *)
 @available(macOS 10.15, *)
 public struct LightBulb: View {
-    public init(_ isSelected: Binding<Bool>, size: CGFloat = 24.0, onColor: Color = .black, offColor: Color = .black) {
+    public init(_ isSelected: Binding<Bool>, size: CGFloat = 24.0, onColor: Color = .black, offColor: Color = .black, duration: CGFloat = 0.5) {
         _isSelected = isSelected
 
         self.size = size
         self.onColor = onColor
         self.offColor = offColor
+        self.duration = duration
 
         if isSelected.wrappedValue {
             self.circleOn = true
@@ -37,6 +38,7 @@ public struct LightBulb: View {
     @State private var size: CGFloat
     @State private var onColor: Color
     @State private var offColor: Color
+    @State private var duration: CGFloat
 
     @State private var circleOn: Bool
     @State private var rectangleOn: Bool
@@ -55,12 +57,12 @@ public struct LightBulb: View {
                 ZStack {
                     Circle()
                         .frame(width: size * 0.675, height: circleOn ? size * 0.675 : 0.0)
-                    VStack {
+                    VStack{
                         RoundedRectangle(cornerRadius: size * 0.04)
                             .frame(width: size * 0.4, height: rectangleOn ? size * 0.15 : 0.0)
                             .offset(x: 0, y: size * 0.315)
                     }
-                    .frame(alignment: .bottom)
+                    .frame(width: size * 0.4, height:size * 0.15, alignment: .bottom)
                 }
                 .blendMode(.destinationOut)
             }
@@ -77,21 +79,21 @@ public struct LightBulb: View {
             withAnimation {
                 if isSelected {
                     isSelected = false
-                    withAnimation(.linear(duration: 0.1)) {
+                    withAnimation(.linear(duration: duration * 0.5)) {
                         circleOn = false
                     }
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                        withAnimation {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.5) {
+                        withAnimation(.linear(duration: duration * 0.5)) {
                             rectangleOn = false
                         }
                     }
                 } else {
                     isSelected = true
-                    withAnimation(.linear(duration: 0.1)) {
+                    withAnimation(.linear(duration: duration * 0.5)) {
                         rectangleOn = true
                     }
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                        withAnimation {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.5) {
+                        withAnimation(.linear(duration: duration * 0.5)) {
                             circleOn = true
                         }
                     }
