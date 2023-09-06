@@ -43,7 +43,7 @@ struct ContentView: View {
                 Text(onScreenState ? "isSun" : "isMoon")
             case "LightBulb":
                 LightBulb($onScreenState, size: 200)
-                Text(onScreenState ? "filled lightbulb" : "unfilled lightbulb")
+                Text(onScreenState ? "lights on" : "lights off")
                 
                 
             case "Loading Spinner":
