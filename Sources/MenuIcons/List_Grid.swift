@@ -37,14 +37,14 @@ public struct List_Grid: View {
         ZStack {
             // MARK: Left dots to grid elements
 
-            // list top left rectangle - grid top left rectangle
+            // list top left rectangle - grid top center rectangle
             Rectangle()
                 .frame(width: isList ? size * 0.1 : size * 0.3, height: isList ? size * 0.1 : size * 0.35)
-                .offset(x: -size * 0.33, y: isList ? -size * 0.15 : -size * 0.19)
-            // list center left rectangle - grid center top rectangle
+                .offset(x: isList ? -size * 0.33 : 0, y: isList ? -size * 0.15 : -size * 0.19)
+            // list center left rectangle - grid top left rectangle
             Rectangle()
                 .frame(width: isList ? size * 0.1 : size * 0.3, height: isList ? size * 0.1 : size * 0.35)
-                .offset(x: isList ? -size * 0.33 : 0, y: isList ? 0 : -size * 0.19)
+                .offset(x: -size * 0.33, y: isList ? 0 : -size * 0.19)
             // list bottom left rectangle - grid bottom left rectangle
             Rectangle()
                 .frame(width: isList ? size * 0.1 : size * 0.3, height: isList ? size * 0.1 : size * 0.35)
@@ -56,14 +56,14 @@ public struct List_Grid: View {
             Rectangle()
                 .frame(width: isList ? size * 0.5 : size * 0.3, height: isList ? size * 0.1 : size * 0.35)
                 .offset(x: isList ? size * 0.05 : size * 0.33, y: isList ? -size * 0.15 : -size * 0.19)
-            // list center right rectangle - grid center bottom rectangle
+            // list center right rectangle - grid bottom right rectangle
             Rectangle()
                 .frame(width: isList ? size * 0.5 : size * 0.3, height: isList ? size * 0.1 : size * 0.35)
-                .offset(x: isList ? size * 0.05 : 0, y: isList ? 0 : size * 0.19)
-            // list bottom right rectangle - grid bottom right rectangle
+                .offset(x: isList ? size * 0.05 : size * 0.33, y: isList ? 0 : size * 0.19)
+            // list bottom right rectangle - grid bottom center rectangle
             Rectangle()
                 .frame(width: isList ? size * 0.5 : size * 0.3, height: isList ? size * 0.1 : size * 0.35)
-                .offset(x: isList ? size * 0.05 : size * 0.33, y: isList ? size * 0.15 : size * 0.19)
+                .offset(x: isList ? size * 0.05 : 0, y: isList ? size * 0.15 : size * 0.19)
         }
         .frame(width: size, height: size)
         .onTapGesture {
