@@ -17,7 +17,7 @@ import SwiftUI
 @available(iOS 13.0, *)
 @available(macOS 10.15, *)
 public struct List_Grid: View {
-    public init(isList: Binding<Bool>, size: CGFloat = 24.0, color: Color = .black, duration: CGFloat = 0.35) {
+    public init(_ isList: Binding<Bool>, size: CGFloat = 24.0, color: Color = .black, duration: CGFloat = 0.35) {
         _isList = isList
         self.size = size
         self.color = color
