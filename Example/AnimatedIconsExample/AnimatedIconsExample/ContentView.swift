@@ -39,7 +39,7 @@ struct ContentView: View {
                 ChevronRotation($onScreenState, from: .right, to: .bottom, lineCaps: .rounded)
                 Text(onScreenState ? "to" : "from")
             case "List_Grid":
-                List_Grid($onScreenState, size: 300, duration: 2)
+                List_Grid($onScreenState, size: 30, duration: 0.5, gridLayout: .TwoByTwo)
                 Text(onScreenState ? "list" : "grid")
             case "Sun_Moon":
                 Sun_Moon($onScreenState, size: 200)
@@ -47,8 +47,7 @@ struct ContentView: View {
             case "LightBulb":
                 LightBulb($onScreenState, size: 200)
                 Text(onScreenState ? "lights on" : "lights off")
-                
-                
+
             case "Loading Spinner":
                 ScrollView {
                     LazyVGrid(columns: [GridItem(), GridItem()]) {
