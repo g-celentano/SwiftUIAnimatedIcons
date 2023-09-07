@@ -108,7 +108,7 @@ public struct List_Grid: View {
                 withAnimation(.linear(duration: duration * 0.2)) {
                     isList = false
                 }
-                DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.2) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.25) {
                     withAnimation(.linear(duration: duration * 0.35)) {
                         if gridLayout == .TwoByTwo {
                             offsets[0] = CGPoint(x: -size * 0.15, y: -size * 0.2)
@@ -141,7 +141,7 @@ public struct List_Grid: View {
                 withAnimation(.linear(duration: duration * 0.2)) {
                     isList = true
                 }
-                DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.2) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.25) {
                     withAnimation(.linear(duration: duration * 0.35)) {
                         offsets[0] = CGPoint(x: -size * 0.35, y: -size * 0.2)
                         offsets[1] = CGPoint(x: -size * 0.35, y: 0)
