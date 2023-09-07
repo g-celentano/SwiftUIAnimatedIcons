@@ -92,15 +92,17 @@ public struct List_Grid: View {
         .frame(width: size, height: size)
         .foregroundColor(color)
         .onTapGesture(perform: updateOffsets)
-        .background(Color.red)
     }
 
     private func updateOffsets() {
         if isList {
             withAnimation(.linear(duration: duration * 0.35)) {
-                for i in 0 ..< offsets.count {
-                    offsets[i] = .zero
-                }
+                offsets[0] = .zero
+                offsets[1] = .zero
+                offsets[2] = .zero
+                offsets[3] = .zero
+                offsets[4] = .zero
+                offsets[5] = .zero
             }
             DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.35) {
                 withAnimation(.linear(duration: duration * 0.2)) {
@@ -128,9 +130,12 @@ public struct List_Grid: View {
             }
         } else {
             withAnimation(.linear(duration: duration * 0.35)) {
-                for i in 0 ..< offsets.count {
-                    offsets[i] = .zero
-                }
+                offsets[0] = .zero
+                offsets[1] = .zero
+                offsets[2] = .zero
+                offsets[3] = .zero
+                offsets[4] = .zero
+                offsets[5] = .zero
             }
             DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.35) {
                 withAnimation(.linear(duration: duration * 0.2)) {
