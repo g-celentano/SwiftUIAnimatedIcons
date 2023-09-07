@@ -66,7 +66,7 @@ public struct Spinner: View {
 
 @available(iOS 13.0, *)
 @available(macOS 10.15, *)
-struct LoadingSinner_Previews: PreviewProvider {
+struct LoadingSpinner_Previews: PreviewProvider {
     static var previews: some View {
         Spinner(loadingAmount: 270, size: 250, ringBackgroundColor: .gray.opacity(0.3))
     }

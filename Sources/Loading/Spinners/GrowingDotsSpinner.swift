@@ -76,7 +76,7 @@ public struct GrowingDotsSpinner: View {
 
 @available(iOS 13.0, *)
 @available(macOS 10.15, *)
-struct SwiftUIView_Previews: PreviewProvider {
+struct GrowingDotsSpinner_Previews: PreviewProvider {
     static var previews: some View {
         GrowingDotsSpinner()
     }

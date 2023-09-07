@@ -46,7 +46,7 @@ public struct DisappearingDotsSpinner: View {
                     .frame(width: size * 0.2)
                     .offset(x: xOff, y: yOff)
                     .opacity(opacities[dotIndex])
-                    .animation(.linear.delay(0.05 * Double(dotsNumber)).repeatForever(autoreverses: false).delay(0.075 * Double(dotIndex)), value: opacities[dotIndex])
+                    .animation(.linear.delay(0.03 * Double(dotsNumber)).repeatForever(autoreverses: false).delay(0.06 * Double(dotIndex)), value: opacities[dotIndex])
             }
         }
         .frame(width: size, height: size)

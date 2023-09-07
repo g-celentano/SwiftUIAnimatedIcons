@@ -86,6 +86,17 @@ Just add the package through **Xcode SPM** using the repo link, and then just us
                 </ul>
             </details>
         </li>
+        <li> 
+            <details>
+                <summary>List_Gird Icon</summary>Parameters list:
+                <ul>
+                    <li> <b>isList</b>: state handle value</li>
+                    <li> <b>size</b>: icon size</li>
+                    <li> <b>color</b>: icon color</li>
+                    <li> <b>duration</b>: animation duration</li>
+                </ul>
+            </details>
+        </li>
     </ul>
 </details>
 <details>
