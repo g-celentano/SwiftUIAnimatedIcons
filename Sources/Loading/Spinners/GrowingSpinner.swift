@@ -23,7 +23,7 @@ public struct GrowingSpinner: View {
         self.spinnerBgColor = spinnerBgColor
         self.rotationDuration = rotationDuration
 
-        self.timer = Timer.publish(every: rotationDuration, on: .main, in: .common)
+        self.timer = Timer.publish(every: rotationDuration * 1.1, on: .main, in: .common) // "rotationDuration * 1.1" in order to have enough time to complete the animation
     }
 
     @State private var size: CGFloat

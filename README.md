@@ -2,6 +2,9 @@
 
 <b>Swift(UI) Package</b> for using animated icons inside projects without the """stress""" of having to handle the state of every _animated icon_.
 
+## Usage
+Just add the package through **Xcode SPM** using the repo link, and then just use the different _"Icon Views"_
+
 ## Currently supported:
 
 <details>
