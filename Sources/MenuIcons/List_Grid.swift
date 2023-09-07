@@ -143,10 +143,10 @@ public struct List_Grid: View {
                 offsets[3] = .zero
                 offsets[4] = .zero
                 offsets[5] = .zero
-                isList = true
             }
             DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.35) {
                 withAnimation(.linear(duration: duration * 0.35)) {
+                    isList = true
                     offsets[0] = CGPoint(x: -size * 0.35, y: -size * 0.2)
                     offsets[1] = CGPoint(x: -size * 0.35, y: 0)
                     offsets[2] = CGPoint(x: -size * 0.35, y: size * 0.2)
