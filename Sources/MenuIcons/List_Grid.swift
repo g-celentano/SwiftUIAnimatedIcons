@@ -39,31 +39,31 @@ public struct List_Grid: View {
 
             // list top left rectangle - grid top left rectangle
             Rectangle()
-                .frame(width: isList ? size * 0.1 : size * 0.3, height: isList ? size * 0.1 : size * 0.475)
-                .offset(x: -size * 0.33, y: isList ? -size * 0.15 : -size * 0.25)
+                .frame(width: isList ? size * 0.1 : size * 0.3, height: isList ? size * 0.1 : size * 0.35)
+                .offset(x: -size * 0.33, y: isList ? -size * 0.15 : -size * 0.19)
             // list center left rectangle - grid center top rectangle
             Rectangle()
-                .frame(width: isList ? size * 0.1 : size * 0.3, height: isList ? size * 0.1 : size * 0.475)
-                .offset(x: isList ? -size * 0.33 : 0, y: isList ? 0 : -size * 0.25)
+                .frame(width: isList ? size * 0.1 : size * 0.3, height: isList ? size * 0.1 : size * 0.35)
+                .offset(x: isList ? -size * 0.33 : 0, y: isList ? 0 : -size * 0.19)
             // list bottom left rectangle - grid bottom left rectangle
             Rectangle()
-                .frame(width: isList ? size * 0.1 : size * 0.3, height: isList ? size * 0.1 : size * 0.475)
-                .offset(x: -size * 0.33, y: isList ? size * 0.15 : size * 0.25)
+                .frame(width: isList ? size * 0.1 : size * 0.3, height: isList ? size * 0.1 : size * 0.35)
+                .offset(x: -size * 0.33, y: isList ? size * 0.15 : size * 0.19)
 
             // MARK: Right long rectangles to grid elements
 
             // list top right rectangle - grid top right rectangle
             Rectangle()
-                .frame(width: isList ? size * 0.5 : size * 0.3, height: isList ? size * 0.1 : size * 0.475)
-                .offset(x: isList ? size * 0.05 : size * 0.33, y: isList ? -size * 0.15 : -size * 0.25)
+                .frame(width: isList ? size * 0.5 : size * 0.3, height: isList ? size * 0.1 : size * 0.35)
+                .offset(x: isList ? size * 0.05 : size * 0.33, y: isList ? -size * 0.15 : -size * 0.19)
             // list center right rectangle - grid center bottom rectangle
             Rectangle()
-                .frame(width: isList ? size * 0.5 : size * 0.3, height: isList ? size * 0.1 : size * 0.475)
-                .offset(x: isList ? size * 0.05 : 0, y: isList ? 0 : size * 0.25)
+                .frame(width: isList ? size * 0.5 : size * 0.3, height: isList ? size * 0.1 : size * 0.35)
+                .offset(x: isList ? size * 0.05 : 0, y: isList ? 0 : size * 0.19)
             // list bottom right rectangle - grid bottom right rectangle
             Rectangle()
-                .frame(width: isList ? size * 0.5 : size * 0.3, height: isList ? size * 0.1 : size * 0.475)
-                .offset(x: isList ? size * 0.05 : size * 0.33, y: isList ? size * 0.15 : size * 0.25)
+                .frame(width: isList ? size * 0.5 : size * 0.3, height: isList ? size * 0.1 : size * 0.35)
+                .offset(x: isList ? size * 0.05 : size * 0.33, y: isList ? size * 0.15 : size * 0.19)
         }
         .frame(width: size, height: size)
         .onTapGesture {
@@ -78,6 +78,6 @@ public struct List_Grid: View {
 @available(macOS 10.15, *)
 struct List_Grid_Previews: PreviewProvider {
     static var previews: some View {
-        List_Grid(.constant(true), size: 100)
+        List_Grid(.constant(false), size: 100)
     }
 }
