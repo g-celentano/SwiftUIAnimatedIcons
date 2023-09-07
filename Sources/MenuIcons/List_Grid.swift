@@ -112,34 +112,29 @@ public struct List_Grid: View {
                     offsets[3] = .zero
                     offsets[4] = .zero
                     offsets[5] = .zero
+                    isList = false
                 }
                 DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.35 * 0.5) {
-                    withAnimation(.linear(duration: duration * 0.2)) {
-                        isList = false
-                    }
-                    DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.21) {
-                        withAnimation(.linear(duration: duration * 0.35)) {
-                            if gridLayout == .TwoByTwo {
-                                offsets[0] = CGPoint(x: -size * 0.15, y: -size * 0.2)
-                                offsets[1] = CGPoint(x: -size * 0.15, y: -size * 0.2)
-                                offsets[2] = CGPoint(x: -size * 0.15, y: size * 0.2)
-                                offsets[3] = CGPoint(x: size * 0.15, y: -size * 0.2)
-                                offsets[4] = CGPoint(x: size * 0.15, y: -size * 0.2)
-                                offsets[5] = CGPoint(x: size * 0.15, y: size * 0.2)
-                            } else {
-                                offsets[0] = CGPoint(x: -size * 0.3, y: -size * 0.2)
-                                offsets[1] = CGPoint(x: 0, y: -size * 0.2)
-                                offsets[2] = CGPoint(x: -size * 0.3, y: size * 0.2)
-                                offsets[3] = CGPoint(x: size * 0.3, y: -size * 0.2)
-                                offsets[4] = CGPoint(x: 0, y: size * 0.2)
-                                offsets[5] = CGPoint(x: size * 0.3, y: size * 0.2)
-                            }
+                    withAnimation(.linear(duration: duration * 0.35)) {
+                        if gridLayout == .TwoByTwo {
+                            offsets[0] = CGPoint(x: -size * 0.15, y: -size * 0.2)
+                            offsets[1] = CGPoint(x: -size * 0.15, y: -size * 0.2)
+                            offsets[2] = CGPoint(x: -size * 0.15, y: size * 0.2)
+                            offsets[3] = CGPoint(x: size * 0.15, y: -size * 0.2)
+                            offsets[4] = CGPoint(x: size * 0.15, y: -size * 0.2)
+                            offsets[5] = CGPoint(x: size * 0.15, y: size * 0.2)
+                        } else {
+                            offsets[0] = CGPoint(x: -size * 0.3, y: -size * 0.2)
+                            offsets[1] = CGPoint(x: 0, y: -size * 0.2)
+                            offsets[2] = CGPoint(x: -size * 0.3, y: size * 0.2)
+                            offsets[3] = CGPoint(x: size * 0.3, y: -size * 0.2)
+                            offsets[4] = CGPoint(x: 0, y: size * 0.2)
+                            offsets[5] = CGPoint(x: size * 0.3, y: size * 0.2)
                         }
                     }
                 }
             }
-            
-            
+
         } else {
             withAnimation(.linear(duration: duration * 0.35)) {
                 offsets[0] = .zero
