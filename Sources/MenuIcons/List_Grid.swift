@@ -78,6 +78,6 @@ public struct List_Grid: View {
 @available(macOS 10.15, *)
 struct List_Grid_Previews: PreviewProvider {
     static var previews: some View {
-        List_Grid(isList: .constant(true), size: 100)
+        List_Grid(.constant(true), size: 100)
     }
 }
