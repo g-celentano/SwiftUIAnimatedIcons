@@ -77,6 +77,22 @@ Just add the package through **Xcode SPM** using the repo link, and then just us
         </li>
         <li> 
             <details>
+                <summary>BurgerMenu_BackArrow Icon</summary>Parameters list:
+                <ul>
+                    <li> <b>isMenu</b>: state handle value
+                    <ul>
+                        <li> <b>true</b> state -> burger icon</li>
+                        <li> <b>false</b> state -> back arrow icon</li>
+                    </ul>
+                    </li>
+                    <li> <b>size</b>: icon size</li>
+                    <li> <b>{burger,arrow}Color</b>: color of the specified icon in-between <i>{}</i> </li>
+                    <li> <b>duration</b>: animation duration</li>
+                </ul>
+            </details>
+        </li>
+        <li> 
+            <details>
                 <summary>Chevron Rotation Icon</summary>Parameters list:
                 <ul>
                     <li> <b>isSelected</b>: state handle value</li>
