@@ -46,8 +46,8 @@ struct ContentView: View {
                 ChevronRotation($onScreenState, from: .right, to: .bottom, lineCaps: .rounded)
                 Text(onScreenState ? "to" : "from")
             case "List_Grid":
-                List_Grid($onScreenState, size: 30, duration: 0.5)
-                Text(onScreenState ? "list" : "grid")
+                List_Grid($onScreenState, size: 100, duration: 0.5, gridLayout: .ThreeByTwo)
+                    Text(onScreenState ? "list" : "grid")
             case "Sun_Moon":
                 Sun_Moon($onScreenState, size: 200)
                 Text(onScreenState ? "isSun" : "isMoon")
