@@ -49,7 +49,7 @@ public struct BurgerMenu_BackArrow: View {
         }
         .frame(width: size, height: size)
         .foregroundColor(isMenu ? burgerColor : arrowColor)
-        .rotationEffect(isMenu ? .degrees(0) : .degrees(180))
+        .rotationEffect(isMenu ? .degrees(0) : .degrees(-180))
         .onTapGesture {
             withAnimation(.linear(duration: duration)) {
                 isMenu.toggle()

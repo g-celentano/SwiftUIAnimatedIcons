@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State var onScreenState: Bool = false
-    @State var availableIcons = ["MoreVert_Cross", "MoreHor_Cross", "Add_Cross", "Burger_Cross", "Chevron Rotation", "List_Grid", "Sun_Moon", "LightBulb", "Loading Spinner", "Loading Dots", "Loading Rects"]
+    @State var availableIcons = ["MoreVert_Cross", "MoreHor_Cross", "Add_Cross", "Burger_Cross", "Burger_Arrow", "Chevron Rotation", "List_Grid", "Sun_Moon", "LightBulb", "Loading Spinner", "Loading Dots", "Loading Rects"]
     @State var selectedIcons = "MoreVert_Cross"
     var body: some View {
         VStack {
@@ -35,6 +35,9 @@ struct ContentView: View {
             case "Burger_Cross":
                 BurgerMenu_Cross($onScreenState, size: 200, isRounded: false)
                 Text(onScreenState ? "cross" : "burger menu")
+            case "Burger_Arrow":
+                BurgerMenu_BackArrow($onScreenState, size: 200)
+                Text(onScreenState ? "burger menu" : "back arrow")
             case "Chevron Rotation":
                 ChevronRotation($onScreenState, from: .right, to: .bottom, lineCaps: .rounded)
                 Text(onScreenState ? "to" : "from")
