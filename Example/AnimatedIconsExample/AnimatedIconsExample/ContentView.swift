@@ -36,7 +36,7 @@ struct ContentView: View {
                 BurgerMenu_Cross($onScreenState, size: 200, isRounded: false)
                 Text(onScreenState ? "cross" : "burger menu")
             case "Burger_Arrow":
-                BurgerMenu_BackArrow($onScreenState, size: 200)
+                BurgerMenu_BackArrow($onScreenState, size: 200, isRounded: false)
                 Text(onScreenState ? "burger menu" : "back arrow")
             case "Chevron Rotation":
                 ChevronRotation($onScreenState, from: .right, to: .bottom, lineCaps: .rounded)

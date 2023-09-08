@@ -40,7 +40,7 @@ public struct BurgerMenu_BackArrow: View {
         ZStack {
             RoundedRectangle(cornerRadius: isRounded ? size * 0.5 : 0.0)
                 .frame(width: menuState ? size * 0.7 : size, height: size * 0.15)
-                .offset(x: isRounded ? 0 : -size * 0.025, y: -size * 0.25)
+                .offset(x: menuState ? isRounded ? 0 : -size * 0.025 : 0.0, y: -size * 0.25)
                 .rotationEffect(menuState ? .degrees(isRounded ? 40 : 35) : .degrees(0))
 
             RoundedRectangle(cornerRadius: isRounded ? size * 0.5 : 0.0)
@@ -48,7 +48,7 @@ public struct BurgerMenu_BackArrow: View {
 
             RoundedRectangle(cornerRadius: isRounded ? size * 0.5 : 0.0)
                 .frame(width: menuState ? size * 0.7 : size, height: size * 0.15)
-                .offset(x: isRounded ? 0 : -size * 0.025, y: size * 0.25)
+                .offset(x: menuState ? isRounded ? 0 : -size * 0.025 : 0.0, y: size * 0.25)
                 .rotationEffect(menuState ? .degrees(isRounded ? -40 : -35) : .degrees(0))
         }
         .frame(width: size, height: size)
