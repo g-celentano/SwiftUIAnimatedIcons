@@ -39,12 +39,12 @@ public struct List_Grid: View {
             offs[5] = CGPoint(x: size * 0.11, y: size * 0.2)
         } else {
             if gridLayout == .TwoByTwo {
-                offs[0] = CGPoint(x: -size * 0.15, y: -size * 0.2)
-                offs[1] = CGPoint(x: -size * 0.15, y: -size * 0.2)
-                offs[2] = CGPoint(x: -size * 0.15, y: size * 0.2)
-                offs[3] = CGPoint(x: size * 0.15, y: -size * 0.2)
-                offs[4] = CGPoint(x: size * 0.15, y: -size * 0.2)
-                offs[5] = CGPoint(x: size * 0.15, y: size * 0.2)
+                offs[0] = CGPoint(x: -size * 0.15, y: -size * 0.15)
+                offs[1] = CGPoint(x: -size * 0.15, y: -size * 0.15)
+                offs[2] = CGPoint(x: -size * 0.15, y: size * 0.15)
+                offs[3] = CGPoint(x: size * 0.15, y: -size * 0.15)
+                offs[4] = CGPoint(x: size * 0.15, y: -size * 0.15)
+                offs[5] = CGPoint(x: size * 0.15, y: size * 0.15)
             } else {
                 offs[0] = CGPoint(x: -size * 0.3, y: -size * 0.2)
                 offs[1] = CGPoint(x: 0, y: -size * 0.2)
@@ -67,26 +67,29 @@ public struct List_Grid: View {
     @State private var offsets: [CGPoint]
 
     public var body: some View {
+        
+        let gridElementHeight = gridLayout == .TwoByTwo ? size * 0.275 : size * 0.35
+        
         ZStack {
             // left list dots to grid elements
             RoundedRectangle(cornerRadius: isList ? size * 0.15 : 0.0)
-                .frame(width: isList ? size * 0.15 : size * 0.275, height: isList ? size * 0.15 : size * 0.35)
+                .frame(width: isList ? size * 0.15 : size * 0.275, height: isList ? size * 0.15 : gridElementHeight)
                 .offset(x: offsets[0].x, y: offsets[0].y)
             RoundedRectangle(cornerRadius: isList ? size * 0.15 : 0.0)
-                .frame(width: isList ? size * 0.15 : size * 0.275, height: isList ? size * 0.15 : size * 0.35)
+                .frame(width: isList ? size * 0.15 : size * 0.275, height: isList ? size * 0.15 : gridElementHeight)
                 .offset(x: offsets[1].x, y: offsets[1].y)
             RoundedRectangle(cornerRadius: isList ? size * 0.15 : 0.0)
-                .frame(width: isList ? size * 0.15 : size * 0.275, height: isList ? size * 0.15 : size * 0.35)
+                .frame(width: isList ? size * 0.15 : size * 0.275, height: isList ? size * 0.15 : gridElementHeight)
                 .offset(x: offsets[2].x, y: offsets[2].y)
             // right list lines to grid elements
             Rectangle()
-                .frame(width: isList ? size * 0.65 : size * 0.275, height: isList ? size * 0.125 : size * 0.35)
+                .frame(width: isList ? size * 0.65 : size * 0.275, height: isList ? size * 0.125 : gridElementHeight)
                 .offset(x: offsets[3].x, y: offsets[3].y)
             Rectangle()
-                .frame(width: isList ? size * 0.65 : size * 0.275, height: isList ? size * 0.125 : size * 0.35)
+                .frame(width: isList ? size * 0.65 : size * 0.275, height: isList ? size * 0.125 : gridElementHeight)
                 .offset(x: offsets[4].x, y: offsets[4].y)
             Rectangle()
-                .frame(width: isList ? size * 0.65 : size * 0.275, height: isList ? size * 0.125 : size * 0.35)
+                .frame(width: isList ? size * 0.65 : size * 0.275, height: isList ? size * 0.125 : gridElementHeight)
                 .offset(x: offsets[5].x, y: offsets[5].y)
         }
         .frame(width: size, height: size)
@@ -117,12 +120,12 @@ public struct List_Grid: View {
                 DispatchQueue.main.asyncAfter(deadline: .now() + duration * 0.35 * 0.5) {
                     withAnimation(.linear(duration: duration * 0.35)) {
                         if gridLayout == .TwoByTwo {
-                            offsets[0] = CGPoint(x: -size * 0.15, y: -size * 0.2)
-                            offsets[1] = CGPoint(x: -size * 0.15, y: -size * 0.2)
-                            offsets[2] = CGPoint(x: -size * 0.15, y: size * 0.2)
-                            offsets[3] = CGPoint(x: size * 0.15, y: -size * 0.2)
-                            offsets[4] = CGPoint(x: size * 0.15, y: -size * 0.2)
-                            offsets[5] = CGPoint(x: size * 0.15, y: size * 0.2)
+                            offsets[0] = CGPoint(x: -size * 0.15, y: -size * 0.15)
+                            offsets[1] = CGPoint(x: -size * 0.15, y: -size * 0.15)
+                            offsets[2] = CGPoint(x: -size * 0.15, y: size * 0.15)
+                            offsets[3] = CGPoint(x: size * 0.15, y: -size * 0.15)
+                            offsets[4] = CGPoint(x: size * 0.15, y: -size * 0.15)
+                            offsets[5] = CGPoint(x: size * 0.15, y: size * 0.15)
                         } else {
                             offsets[0] = CGPoint(x: -size * 0.3, y: -size * 0.2)
                             offsets[1] = CGPoint(x: 0, y: -size * 0.2)
@@ -163,6 +166,6 @@ public struct List_Grid: View {
 @available(macOS 10.15, *)
 struct List_Grid_Previews: PreviewProvider {
     static var previews: some View {
-        List_Grid(.constant(false), size: 100)
+        List_Grid(.constant(false), size: 100, gridLayout: .TwoByTwo)
     }
 }
