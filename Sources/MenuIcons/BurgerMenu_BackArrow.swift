@@ -19,13 +19,14 @@ import SwiftUI
 @available(iOS 13.0, *)
 @available(macOS 10.15, *)
 public struct BurgerMenu_BackArrow: View {
-    public init(_ menuState: Binding<Bool>, size: CGFloat = 24.0, burgerColor: Color = .black, arrowColor: Color = .black, duration: CGFloat = 0.4) {
+    public init(_ menuState: Binding<Bool>, size: CGFloat = 24.0, burgerColor: Color = .black, arrowColor: Color = .black, duration: CGFloat = 0.4, isRounded: Bool = true) {
         _menuState = menuState
 
         self.size = size
         self.burgerColor = burgerColor
         self.arrowColor = arrowColor
         self.duration = duration
+        self.isRounded = isRounded
     }
 
     @Binding private var menuState: Bool
@@ -33,21 +34,22 @@ public struct BurgerMenu_BackArrow: View {
     @State private var burgerColor: Color
     @State private var arrowColor: Color
     @State private var duration: CGFloat
+    @State private var isRounded: Bool
 
     public var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: size * 0.5)
+            RoundedRectangle(cornerRadius: isRounded ? size * 0.5 : 0.0)
                 .frame(width: menuState ? size * 0.7 : size, height: size * 0.15)
-                .offset(x: 0, y: -size * 0.25)
-                .rotationEffect(menuState ? .degrees(40) : .degrees(0))
+                .offset(x: isRounded ? 0 : -size * 0.025, y: -size * 0.25)
+                .rotationEffect(menuState ? .degrees(isRounded ? 40 : 35) : .degrees(0))
 
-            RoundedRectangle(cornerRadius: size * 0.5)
+            RoundedRectangle(cornerRadius: isRounded ? size * 0.5 : 0.0)
                 .frame(width: menuState ? size * 0.9 : size, height: size * 0.15)
 
-            RoundedRectangle(cornerRadius: size * 0.5)
+            RoundedRectangle(cornerRadius: isRounded ? size * 0.5 : 0.0)
                 .frame(width: menuState ? size * 0.7 : size, height: size * 0.15)
-                .offset(x: 0, y: size * 0.25)
-                .rotationEffect(menuState ? .degrees(-40) : .degrees(0))
+                .offset(x: isRounded ? 0 : -size * 0.025, y: size * 0.25)
+                .rotationEffect(menuState ? .degrees(isRounded ? -40 : -35) : .degrees(0))
         }
         .frame(width: size, height: size)
         .foregroundColor(menuState ? arrowColor : burgerColor)
@@ -64,6 +66,6 @@ public struct BurgerMenu_BackArrow: View {
 @available(macOS 10.15, *)
 struct BurgerMenu_BackArrow_Previews: PreviewProvider {
     static var previews: some View {
-        BurgerMenu_BackArrow(.constant(false), size: 100)
+        BurgerMenu_BackArrow(.constant(true), size: 100, isRounded: false)
     }
 }
