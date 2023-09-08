@@ -79,10 +79,10 @@ Just add the package through **Xcode SPM** using the repo link, and then just us
             <details>
                 <summary>BurgerMenu_BackArrow Icon</summary>Parameters list:
                 <ul>
-                    <li> <b>isMenu</b>: state handle value
+                    <li> <b>menuState</b>: state handle value
                     <ul>
-                        <li> <b>true</b> state -> burger icon</li>
-                        <li> <b>false</b> state -> back arrow icon</li>
+                        <li> <b>true</b> state -> back arrow icon</li>
+                        <li> <b>false</b> state -> burger icon</li>
                     </ul>
                     </li>
                     <li> <b>size</b>: icon size</li>
