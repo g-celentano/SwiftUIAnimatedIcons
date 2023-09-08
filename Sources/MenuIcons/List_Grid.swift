@@ -22,7 +22,7 @@ public enum GridLayout {
 @available(iOS 13.0, *)
 @available(macOS 10.15, *)
 public struct List_Grid: View {
-    public init(_ isList: Binding<Bool>, size: CGFloat = 30.0, color: Color = .black, duration: CGFloat = 0.35, gridLayout: GridLayout = .TwoByTwo) {
+    public init(_ isList: Binding<Bool>, size: CGFloat = 30.0, color: Color = .black, duration: CGFloat = 0.35, gridLayout: GridLayout = .ThreeByTwo) {
         _isList = isList
         self.size = size
         self.color = color
@@ -69,24 +69,24 @@ public struct List_Grid: View {
     public var body: some View {
         ZStack {
             // left list dots to grid elements
-            Rectangle()
+            RoundedRectangle(cornerRadius: isList ? size * 0.15 : 0.0)
                 .frame(width: isList ? size * 0.15 : size * 0.275, height: isList ? size * 0.15 : size * 0.35)
                 .offset(x: offsets[0].x, y: offsets[0].y)
-            Rectangle()
+            RoundedRectangle(cornerRadius: isList ? size * 0.15 : 0.0)
                 .frame(width: isList ? size * 0.15 : size * 0.275, height: isList ? size * 0.15 : size * 0.35)
                 .offset(x: offsets[1].x, y: offsets[1].y)
-            Rectangle()
+            RoundedRectangle(cornerRadius: isList ? size * 0.15 : 0.0)
                 .frame(width: isList ? size * 0.15 : size * 0.275, height: isList ? size * 0.15 : size * 0.35)
                 .offset(x: offsets[2].x, y: offsets[2].y)
             // right list lines to grid elements
             Rectangle()
-                .frame(width: isList ? size * 0.65 : size * 0.275, height: isList ? size * 0.15 : size * 0.35)
+                .frame(width: isList ? size * 0.65 : size * 0.275, height: isList ? size * 0.125 : size * 0.35)
                 .offset(x: offsets[3].x, y: offsets[3].y)
             Rectangle()
-                .frame(width: isList ? size * 0.65 : size * 0.275, height: isList ? size * 0.15 : size * 0.35)
+                .frame(width: isList ? size * 0.65 : size * 0.275, height: isList ? size * 0.125 : size * 0.35)
                 .offset(x: offsets[4].x, y: offsets[4].y)
             Rectangle()
-                .frame(width: isList ? size * 0.65 : size * 0.275, height: isList ? size * 0.15 : size * 0.35)
+                .frame(width: isList ? size * 0.65 : size * 0.275, height: isList ? size * 0.125 : size * 0.35)
                 .offset(x: offsets[5].x, y: offsets[5].y)
         }
         .frame(width: size, height: size)
@@ -163,6 +163,6 @@ public struct List_Grid: View {
 @available(macOS 10.15, *)
 struct List_Grid_Previews: PreviewProvider {
     static var previews: some View {
-        List_Grid(.constant(true), size: 100)
+        List_Grid(.constant(false), size: 100)
     }
 }
