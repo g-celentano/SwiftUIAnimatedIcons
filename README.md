@@ -383,7 +383,6 @@ Just add the package through **Xcode SPM** using the repo link, and then just us
                 <li> <b>color</b>: icon color</li>
                 <li> <b>duration</b>: animation duration</li>
             </ul>
-        
         </details>
         </li>
     </ul>
