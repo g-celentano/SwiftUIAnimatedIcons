@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State var onScreenState: Bool = false
-    @State var availableIcons = ["MoreVert_Cross", "MoreHor_Cross", "Add_Cross", "Burger_Cross", "Burger_Arrow", "Chevron Rotation", "List_Grid", "Sun_Moon", "LightBulb", "Loading Spinner", "Loading Dots", "Loading Rects"]
+    @State var availableIcons = ["MoreVert_Cross", "MoreHor_Cross", "Add_Cross", "Burger_Cross", "Burger_Arrow", "Chevron Rotation", "List_Grid", "Sun_Moon", "LightBulb", "Loading Spinners", "Loading Dots", "Loading Rects", "Audio"]
     @State var selectedIcons = "MoreVert_Cross"
     var body: some View {
         VStack {
@@ -55,7 +55,7 @@ struct ContentView: View {
                 LightBulb($onScreenState, size: 200)
                 Text(onScreenState ? "lights on" : "lights off")
 
-            case "Loading Spinner":
+            case "Loading Spinners":
                 ScrollView {
                     LazyVGrid(columns: [GridItem(), GridItem()]) {
                         VStack {
@@ -149,6 +149,17 @@ struct ContentView: View {
                             DisappearingRects(size: 150, delay: 0.25)
                             DisappearingRects()
                             Text("Rotating Loading Dots")
+                        }
+                    }
+                }
+            case "Audio":
+                ScrollView {
+                    LazyVGrid(columns: [GridItem(), GridItem()]) {
+                        VStack {
+                            Play_Pause($onScreenState)
+                            Play_Pause($onScreenState, size: 60, color: .red)
+                            Play_Pause($onScreenState, size: 100, duration: 0.75)
+                            Text(onScreenState ? "play" : "pause")
                         }
                     }
                 }
