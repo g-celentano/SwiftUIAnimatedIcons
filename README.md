@@ -369,5 +369,24 @@ Just add the package through **Xcode SPM** using the repo link, and then just us
         <!--- RECTS END -->
         </details>
         </li>
+        <li>
+        <details>
+        <summary><b>Audio Icons</b></summary>
+            <ul>
+                <li>
+                <details>
+                <summary> <b>Play_Pause</b> </summary>Parameters list:
+                    <ul>
+                        <li> <b>iconState</b>: state handle value</li>
+                        <li> <b>size</b>: icon size</li>
+                        <li> <b>color</b>: icon color</li>
+                        <li> <b>duration</b>: animation duration</li>
+                    </ul>
+                
+                </details>
+                </li>
+            </ul>
+        </details>
+        </li>
     </ul>
 </details>

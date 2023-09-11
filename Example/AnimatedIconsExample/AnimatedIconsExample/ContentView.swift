@@ -47,7 +47,7 @@ struct ContentView: View {
                 Text(onScreenState ? "to" : "from")
             case "List_Grid":
                 List_Grid($onScreenState, size: 100, duration: 0.5, gridLayout: .ThreeByTwo)
-                    Text(onScreenState ? "list" : "grid")
+                Text(onScreenState ? "list" : "grid")
             case "Sun_Moon":
                 Sun_Moon($onScreenState, size: 200)
                 Text(onScreenState ? "isSun" : "isMoon")
