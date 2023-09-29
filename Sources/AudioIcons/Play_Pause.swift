@@ -80,6 +80,6 @@ public struct Play_Pause: View {
 @available(macOS 10.15, *)
 struct Play_Pause_Previews: PreviewProvider {
     static var previews: some View {
-        Play_Pause(.constant(false), size: 200)
+        Play_Pause(.constant(true), size: 200)
     }
 }
