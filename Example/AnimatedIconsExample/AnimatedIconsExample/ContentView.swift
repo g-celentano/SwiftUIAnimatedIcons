@@ -156,11 +156,13 @@ struct ContentView: View {
                 ScrollView {
                     LazyVGrid(columns: [GridItem(), GridItem()]) {
                         VStack {
-                            Play_Pause($onScreenState)
-                            Play_Pause($onScreenState, size: 60, color: .red)
-                            Play_Pause($onScreenState, size: 100, duration: 0.75)
+                            Play_Pause($onScreenState, size: 100, duration: 0.25)
                             Text(onScreenState ? "play" : "pause")
                         }
+                        VStack {
+                            AudioControl(size: 100, duration: 0.25)
+                        }
+                        
                     }
                 }
 
